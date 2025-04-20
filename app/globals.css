@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-navy-900 {
+  color: #1a365d;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[--color-blue-500] to-[--color-cyan] bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply p-6 mt-6 text-left border rounded-xl hover:text-blue-500 focus:text-blue-500;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card h2 {
+    @apply mb-4 text-2xl;
+  }
+
+  .card p {
+    @apply m-0 text-xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 

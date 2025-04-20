@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+description: 使用 next-seo 库在 Next.js 中定义元数据的规则。
+globs: **/*.tsx
+---
+- 对于页面元数据（在 .tsx 文件中）：
+  tsx
+  import { NextSeo } from 'next-seo'
+  export default function Page() {
+    return (
+      <>
+        <NextSeo
+          title="页面标题"
+          description="页面描述"
+          canonical="https://example.com/page"
+          openGraph={{
+            url: 'https://example.com/page',
+            title: '页面标题',
+            description: '页面描述',
+            images: [
+              {
+                url: 'https://example.com/images/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: '页面标题',
+              },
+            ],
+            site_name: '网站名称',
+          }}
+          twitter={{
+            handle: '@twitter_handle',
+            site: '@twitter_handle',
+            cardType: 'summary_large_image',
+          }}
+        />
+        {/* 页面内容 */}
+      </>
+    )
+  }

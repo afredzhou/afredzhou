@@ -35,7 +35,8 @@
     "sanity-plugin-asset-source-unsplash": "3.0.3",
     "sanity-plugin-iframe-pane": "3.2.1",
     "styled-components": "6.1.17",
-    "swr": "2.3.3"
+    "swr": "2.3.3",
+    "webflow-api": "^3.1.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.3",
