@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Source Han Sans CN"', 'sans-serif'],
+        display: ['"Alibaba PuHuiTi"', 'sans-serif'],
+      },
       colors: {
         primary: '#FF6B6B',
         secondary: '#4ECDC4',
@@ -75,4 +79,4 @@ module.exports = {
     },
   },
   plugins: [],
-} 
+}

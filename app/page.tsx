@@ -63,32 +63,25 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-6xl font-bold text-navy-900 mb-4">
-                Hy! I Am <br />
+              <h1 className="text-4xl md:text-6xl font-bold text-navy-900 mb-4 font-display">
+                你好! 我是 <br />
                 <span className="text-blue-900">Brunao Dev</span>
               </h1>
               <p className="text-gray-600 mb-8">
-                Product designer and digital creative director working in design
-                field for 7 years so far. Specialized user interface design.
+                产品设计师和数字创意总监，在设计领域工作7年。专注于用户界面设计。
               </p>
               <Link
                 href="#contact"
                 className="bg-orange-500 text-white px-8 py-3 rounded-full hover:bg-orange-600 transition"
               >
-                Hire Me
+                联系我
               </Link>
             </div>
             <div className="md:w-1/2 relative mt-10 md:mt-0">
-              <Image
-                src="/hero-image.png"
-                alt="Brunao Dev"
-                width={500}
-                height={500}
-                className="relative z-10"
-              />
-              {/* Floating Elements */}
+              <div className="w-full h-[500px] bg-gray-200 rounded-lg"></div>
+              {/* 浮动元素 */}
               <div className="absolute top-10 right-10 bg-white p-4 rounded-xl shadow-lg">
-                <span>🏆 Best Design Awards</span>
+                <span>🏆 最佳设计奖</span>
               </div>
               <div className="absolute bottom-10 left-10 bg-white p-4 rounded-xl shadow-lg">
                 <span>🎨 UI/UX</span>
@@ -98,55 +91,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* 服务部分 */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">
-            My Awesome <span className="text-orange-500">Services</span>
+          <h2 className="text-4xl font-bold mb-12 font-display">
+            我的 <span className="text-orange-500">服务</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="mb-4">👨‍💻</div>
-              <h3 className="text-xl font-bold mb-2">Developer</h3>
+              <h3 className="text-xl font-bold mb-2 font-display">开发</h3>
               <p className="text-gray-600">
-                Expert in creating robust and scalable web applications
+                专注于创建稳健可扩展的网络应用
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-2">UI/UX</h3>
+              <h3 className="text-xl font-bold mb-2 font-display">UI/UX</h3>
               <p className="text-gray-600">
-                Creating beautiful and intuitive user interfaces
+                创造美观直观的用户界面
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
               <div className="mb-4">✨</div>
-              <h3 className="text-xl font-bold mb-2">Design</h3>
+              <h3 className="text-xl font-bold mb-2 font-display">设计</h3>
               <p className="text-gray-600">
-                Crafting visually stunning digital experiences
+                打造令人惊叹的数字体验
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Work Stats Section */}
+      {/* 工作统计部分 */}
       <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">
-            Clients Get Always<br />
-            Exceptional Works<br />
-            From Me
+          <h2 className="text-4xl font-bold mb-12 font-display">
+            客户总能获得<br />
+            卓越的作品
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold">Top Quality Works</h3>
+              <h3 className="text-xl font-bold font-display">顶级品质</h3>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold">Commitments</h3>
+              <h3 className="text-xl font-bold font-display">信守承诺</h3>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold">24 Hours active</h3>
+              <h3 className="text-xl font-bold font-display">24小时响应</h3>
             </div>
           </div>
         </div>
@@ -212,4 +204,4 @@ export default function Home() {
       </section>
     </main>
   )
-} 
+}

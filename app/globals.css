@@ -18,6 +18,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
+  font-family: "Source Han Sans CN", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alibaba PuHuiTi", sans-serif;
 }
 
 .container {
@@ -74,4 +79,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-} 
+}
