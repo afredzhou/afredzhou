@@ -18,10 +18,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, iconBgUrl, arrowIconBg
     </div>
     <div className="relative z-10 mt-auto flex justify-between items-end">
       <h3 className="text-white font-display text-3xl max-w-[200px]">{title}</h3>
-      <Link href="#">
-        <a className={`flex items-center justify-center w-16 h-16 rounded-full ${arrowIconBgColor}`}>
+      <Link href="/" className={`flex items-center justify-center w-16 h-16 rounded-full ${arrowIconBgColor}`}>
           <ArrowUpRightIcon className="w-8 h-8 text-white" />
-        </a>
       </Link>
     </div>
   </div>
@@ -74,10 +72,8 @@ const ProjectCardFigma: React.FC<ProjectCardFigmaProps> = ({ title, imageUrl, ta
         </div>
         <h3 className="text-4xl font-bold text-[#344054] font-display">{title}</h3>
          <p className="text-[#344054] text-lg">{description}</p>
-         <Link href="#">
-             <a className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#FD853A] bg-[#FD853A]/10 hover:bg-[#FD853A]/20 transition">
-                 <ArrowUpRightIcon className="w-6 h-6 text-[#FD853A]" />
-             </a>
+         <Link href="#" className="inline-flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#FD853A] bg-[#FD853A]/10 hover:bg-[#FD853A]/20 transition">
+             <ArrowUpRightIcon className="w-6 h-6 text-[#FD853A]" />
          </Link>
       </div>
     </div>
@@ -127,10 +123,8 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
         <div className="relative h-60 rounded-xl overflow-hidden shadow-lg">
             <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
             <div className="absolute top-4 right-4">
-                 <Link href="#">
-                     <a className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1D2939] hover:bg-[#344054] transition">
-                         <ArrowUpRightIcon className="w-6 h-6 text-white" />
-                     </a>
+                 <Link href="#" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1D2939] hover:bg-[#344054] transition">
+                     <ArrowUpRightIcon className="w-6 h-6 text-white" />
                  </Link>
             </div>
         </div>
@@ -164,16 +158,12 @@ export default function Home() {
               </h1>
 
               <div className="flex gap-4">
-                 <Link href="#">
-                    <a className="flex items-center gap-2 bg-[#FD853A] text-white px-6 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
-                        <span>Portfolio</span>
-                        <ArrowUpRightIcon className="w-5 h-5"/>
-                    </a>
-                </Link>
-                 <Link href="#">
-                    <a className="flex items-center bg-[#10110E] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
-                        Hire me
-                    </a>
+                 <Link href="#" className="flex items-center gap-2 bg-[#FD853A] text-white px-6 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
+                    <span>Portfolio</span>
+                    <ArrowUpRightIcon className="w-5 h-5"/>
+                 </Link>
+                 <Link href="#" className="flex items-center bg-[#10110E] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
+                    Hire me
                  </Link>
               </div>
             </div>
@@ -274,11 +264,9 @@ export default function Home() {
                         <p className="text-[#667085] text-lg">Positive Reviews</p>
                     </div>
                 </div>
-                 <Link href="#">
-                    <a className="bg-white text-[#151515] px-10 py-5 rounded-full font-semibold text-2xl border border-[#151515] hover:bg-gray-100 transition">
-                        Hire me
-                    </a>
-                </Link>
+                 <Link href="#" className="bg-white text-[#151515] px-10 py-5 rounded-full font-semibold text-2xl border border-[#151515] hover:bg-gray-100 transition">
+                    Hire me
+                 </Link>
            </div>
         </div>
       </section>
@@ -287,10 +275,8 @@ export default function Home() {
         <div className="container mx-auto">
             <div className="flex justify-between items-center mb-12">
                 <h2 className="text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">Let's have a look at my Portfolio</h2>
-                <Link href="#">
-                    <a className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
-                        See All
-                    </a>
+                <Link href="#" className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
+                    See All
                 </Link>
             </div>
 
@@ -350,11 +336,9 @@ export default function Home() {
                     <h2 className="text-5xl font-bold text-[#344054] font-display">From my</h2>
                     <h2 className="text-5xl font-bold text-[#344054] font-display">blog post</h2>
                  </div>
-                 <Link href="#">
-                    <a className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
-                        See All
-                    </a>
-                </Link>
+                 <Link href="#" className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
+                    See All
+                 </Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                  <BlogPostCard
@@ -421,20 +405,20 @@ export default function Home() {
                        <div className="font-bold text-2xl">Logo</div>
                        <p className="text-sm opacity-80">{lorem}</p>
                        <div className="flex gap-4 mt-2">
-                           <Link href="#"><a className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">F</a></Link>
-                           <Link href="#"><a className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">Y</a></Link>
-                           <Link href="#"><a className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">W</a></Link>
-                           <Link href="#"><a className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">I</a></Link>
-                           <Link href="#"><a className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">T</a></Link>
+                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">F</Link>
+                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">Y</Link>
+                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">W</Link>
+                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">I</Link>
+                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">T</Link>
                        </div>
                    </div>
                    <div className="flex flex-col gap-5">
                         <h5 className="text-[#FD853A] font-semibold text-lg">Navigation</h5>
-                        <Link href="#"><a className="hover:text-white/80 transition">Home</a></Link>
-                        <Link href="#"><a className="hover:text-white/80 transition">About Us</a></Link>
-                        <Link href="#"><a className="hover:text-white/80 transition">Service</a></Link>
-                        <Link href="#"><a className="hover:text-white/80 transition">Resume</a></Link>
-                        <Link href="#"><a className="hover:text-white/80 transition">Project</a></Link>
+                        <Link href="#" className="hover:text-white/80 transition">Home</Link>
+                        <Link href="#" className="hover:text-white/80 transition">About Us</Link>
+                        <Link href="#" className="hover:text-white/80 transition">Service</Link>
+                        <Link href="#" className="hover:text-white/80 transition">Resume</Link>
+                        <Link href="#" className="hover:text-white/80 transition">Project</Link>
                    </div>
                    <div className="flex flex-col gap-5">
                         <h5 className="text-[#FD853A] font-semibold text-lg">Contact</h5>
