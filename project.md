@@ -1,11 +1,8 @@
 Afred Zhou 个人网站迁移项目
 
 🖼️ 项目概述
-本项目旨在将 Afred Zhou 的个人网站从 Webflow 迁移到基于 Next.js 和 Sanity 的现代架构。​通过此迁移，网站将具备更高的性能、可扩展性和内容管理灵活性，同时保持原有设计风格。​
-要复制过来的网址是：https://afredzhou.webflow.io/
-如果webflow Mcp server可以用的话。可以优先使用webflow Mcp server
+本项目旨在将 Afred Zhou 的个人网站到基于 Next.js 和 Sanity 的现代架构。​通过此迁移，网站将具备更高的性能、可扩展性和内容管理灵活性，同时保持原有设计风格。​
 
-网站的ui可以参考public/Template文件夹的图片
 
 🧰 技术栈
 前端框架：​Next.js
