@@ -1,10 +1,11 @@
+import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-export const metadata = {
-  title: 'Mstudio - Creative Design Agency',
-  description: 'We create beautiful digital experiences with passion and purpose.',
+export const metadata: Metadata = {
+  title: 'Afred - Product Designer Portfolio',
+  description: 'Portfolio website showcasing UI/UX and product design work',
   icons: {
     icon: [
       {
@@ -27,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <head>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alibaba-puhuiti-regular/index.css" />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/source-han-sans-cn/index.css" />
+        <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Urbanist:wght@400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Vast+Shadow&display=swap" />
+        <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Lufga:wght@400;500;600&display=swap" />
       </head>
       <body>
         <Navbar />

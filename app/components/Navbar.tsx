@@ -1,35 +1,43 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-navy-900">
-            Mstudio
-          </Link>
-          
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900">About Us</Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">Services</Link>
-            <Link href="/contact" className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">
-              Contact Us
+    <nav className="fixed top-0 left-0 w-full z-50">
+      <div className="max-w-[1200px] mx-auto py-6">
+        <div className="bg-[#151515] rounded-full px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-12">
+            <Link href="/" className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium">
+              Home
+            </Link>
+            <Link href="/about" className="text-white text-base font-medium">
+              About
+            </Link>
+            <Link href="/service" className="text-white text-base font-medium">
+              Service
             </Link>
           </div>
-          
-          <button 
-            className="md:hidden"
-            aria-label="Toggle navigation menu"
-            title="Toggle navigation menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+            <Image src="/figma-images/logo.svg" alt="JCREA" width={24} height={24} />
+            <span className="text-white text-base font-medium">Afred</span>
+          </Link>
+
+          <div className="flex items-center gap-12">
+            <Link href="/resume" className="text-white text-base font-medium">
+              Resume
+            </Link>
+            <Link href="/project" className="text-white text-base font-medium">
+              Project
+            </Link>
+            <Link href="/contact" className="text-white text-base font-medium">
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
   )
-} 
+}
+
+export default Navbar 

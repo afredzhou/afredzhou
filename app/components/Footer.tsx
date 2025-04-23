@@ -2,75 +2,95 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-12">
+    <footer className="bg-[#2B2B2B] text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold text-navy-900 mb-4">Mstudio</h3>
-            <p className="text-gray-600">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Logo & Description */}
+          <div className="col-span-1">
+            <h3 className="text-xl font-bold mb-4">Afred Zhou</h3>
+            <p className="text-gray-400 mb-6">
               Creating beautiful digital experiences with passion and purpose.
             </p>
+            {/* Social Media Links */}
+            <div className="flex space-x-4">
+              <Link href="#" className="w-10 h-10 rounded-full bg-[#3B3B3B] flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                F
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-[#3B3B3B] flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                Y
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-[#3B3B3B] flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                W
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-[#3B3B3B] flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                I
+              </Link>
+              <Link href="#" className="w-10 h-10 rounded-full bg-[#3B3B3B] flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                T
+              </Link>
+            </div>
           </div>
-          
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+
+          {/* Navigation Links */}
+          <div className="col-span-1">
+            <h4 className="text-orange-500 font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-3">
+              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
+              <li><Link href="/service" className="text-gray-400 hover:text-white">Service</Link></li>
+              <li><Link href="/resume" className="text-gray-400 hover:text-white">Resume</Link></li>
+              <li><Link href="/project" className="text-gray-400 hover:text-white">Project</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="col-span-1">
+            <h4 className="text-orange-500 font-semibold mb-4">Contact</h4>
+            <ul className="space-y-3 text-gray-400">
+              <li>+20 11 43 63 73 41</li>
               <li>
-                <Link href="/" className="text-gray-600 hover:text-gray-900">
-                  Home
-                </Link>
+                <a href="mailto:hello@afred.me" className="hover:text-white">
+                  hello@afred.me
+                </a>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-gray-900">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-900">
-                  Contact
-                </Link>
+                <a href="https://afred.me" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  afred.me
+                </a>
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/services/web-development" className="text-gray-600 hover:text-gray-900">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/ui-design" className="text-gray-600 hover:text-gray-900">
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/branding" className="text-gray-600 hover:text-gray-900">
-                  Branding
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>Email: info@mstudio.com</li>
-              <li>Phone: +1 234 567 890</li>
-              <li>Address: 123 Design Street, Creative City, 12345</li>
-            </ul>
+
+          {/* Newsletter */}
+          <div className="col-span-1">
+            <h4 className="text-orange-500 font-semibold mb-4">Get the latest information</h4>
+            <div className="flex">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="flex-1 px-4 py-3 bg-white text-[#000000] placeholder-[#000000]/60 focus:outline-none rounded-l-lg"
+              />
+              <button
+                type="submit"
+                className="bg-orange-500 text-white px-6 py-3 rounded-r-lg hover:bg-orange-600 transition-colors"
+              >
+                ▶
+              </button>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Mstudio. All rights reserved.</p>
+
+        {/* Bottom Section */}
+        <div className="border-t border-[#3B3B3B] mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <p>Copyright© 2024 Afred Zhou. All Rights Reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <Link href="/terms" className="hover:text-white">User Terms & Conditions</Link>
+              <span>|</span>
+              <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

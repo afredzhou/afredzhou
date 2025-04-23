@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Source Han Sans CN"', 'sans-serif'],
-        display: ['"Alibaba PuHuiTi"', 'sans-serif'],
+        sans: ['Urbanist', 'sans-serif'],
+        display: ['Vast Shadow', 'cursive'],
+        body: ['Lufga', 'sans-serif'],
       },
       colors: {
         primary: '#FF6B6B',

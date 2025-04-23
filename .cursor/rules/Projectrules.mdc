@@ -1,3 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
 Project Management:
 - 所有功能实现应参考 PROJECT.md
 - 所有API端点及其请求/响应格式参考 Documentation.md
@@ -5,3 +10,4 @@ Project Management:
 - 遵循已建立的数据库架构
 - 考虑指标中定义的成本优化
 - 保持与现有组件的一致性
+- 新生成大代码的UI与原来的保持一致

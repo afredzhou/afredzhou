@@ -145,67 +145,111 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-[#171717]">
-
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-16">
-            <div className="md:w-1/2 flex flex-col gap-8 items-start">
-              <div className="inline-flex items-center gap-2 bg-white/10 border border-[#171717]/10 rounded-full px-6 py-3 backdrop-blur-sm">
-                <span className="text-[#171717] font-medium text-lg">Hello!</span>
-              </div>
-              <h1 className="font-['Vast_Shadow'] text-6xl md:text-8xl text-[#171717] leading-tight">
-                I'm Afred,<br />Product Designer
-              </h1>
-
-              <div className="flex gap-4">
-                 <Link href="#" className="flex items-center gap-2 bg-[#FD853A] text-white px-6 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
-                    <span>Portfolio</span>
-                    <ArrowUpRightIcon className="w-5 h-5"/>
-                 </Link>
-                 <Link href="#" className="flex items-center bg-[#10110E] text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-opacity-90 transition">
-                    Hire me
-                 </Link>
+      {/* Hero Section */}
+      <section className="relative w-[1440px] h-[846px] bg-white mt-25 ">
+        <div className="relative w-full h-full flex flex-col">
+          {/* Content Container */}
+          <div className="flex-1 relative">
+            {/* Hello Text */}
+            <div className="flex justify-center mt-8">
+              <div className="inline-flex flex-col items-center">
+                <div className="h-8 px-4 py-1.5 bg-white rounded-[38px] outline outline-[1.27px] outline-neutral-900 inline-flex justify-center items-center relative">
+                  <span className="text-neutral-900 text-base font-medium font-['Lufga']">Hello!</span>
+                  <div className="absolute -right-3 -top-3">
+                    <Image 
+                      src="/figma-images/sparkle-hello.svg" 
+                      alt="" 
+                      width={24} 
+                      height={24}
+                      className="w-6 h-6"
+                    />
+                  </div>
+                </div>
+                
+                {/* Title */}
+                <div className="mt-8 text-center">
+                  <h1 className="text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
+                    <span className="text-neutral-900">I'm </span>
+                    <span className="text-[#FD853A]">Afred</span>
+                  </h1>
+                  <div className="relative -mt-6">
+                    <h1 className="text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
+                      Product Designer
+                    </h1>
+                    <img src="/figma-images/sparkle-left.svg" alt="" className="absolute -left-16 top-1/2 -translate-y-1/2 w-16 h-20 rotate-[-167.61deg]" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="md:w-1/2 relative flex justify-center items-center">
-                <div className="absolute top-10 left-0 bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-lg max-w-xs z-20 border border-white/20">
-                    <p className="text-[#344054] text-lg font-medium">
-                        &ldquo;Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended&rdquo;
-                    </p>
+            {/* Main Content */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[952px]">
+              {/* Background Circle */}
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[812px] h-[406px] bg-[#FEB273] rounded-t-full"></div>
+
+              {/* Profile Image Container */}
+              <div className="relative">
+                {/* Profile Image */}
+                <Image 
+                  src="/figma-images/profile-image.png" 
+                  alt="Afred Profile" 
+                  width={952} 
+                  height={636} 
+                  className="relative z-10"
+                />
+
+                {/* Testimonial */}
+                <div className="absolute left-[-200px] top-[240px] flex flex-col gap-6 max-w-[280px] z-20">
+                  <div className="w-9 h-9 relative">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                  <p className="text-[#344054] text-xl font-medium font-['Lufga']">Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
                 </div>
 
-                <div className="relative z-10">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-[450px] h-[450px] bg-[#FEB273] rounded-full blur-[100px] opacity-50"></div>
-                    </div>
-                    <Image src="/figma-images/profile-image.png" alt="Afred Profile" width={500} height={600} objectFit="contain" className="relative z-10" />
+                {/* Rating and Experience */}
+                <div className="absolute right-[-200px] top-[240px] flex flex-col items-end gap-5 z-20">
+                  <div className="flex">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <div key={i} className="w-8 h-8">
+                        <div className="w-7 h-6 mx-auto my-1 bg-[#FD853A]"></div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-right">
+                    <p className="text-neutral-900 text-[64px] font-bold font-['Urbanist'] leading-[1]">10 Years</p>
+                    <p className="text-neutral-900 text-2xl font-normal font-['Lufga']">Experience</p>
+                  </div>
                 </div>
 
-                <div className="absolute bottom-10 right-0 flex flex-col items-end gap-4 z-20">
-                    <div className="flex items-center gap-1">
-                         {Array.from({ length: 5 }).map((_, i) => (
-                          <StarIcon key={i} className="w-6 h-6 text-[#FD853A]" />
-                        ))}
-                    </div>
-                    <div className="text-right">
-                        <p className="text-[#171717] font-bold text-4xl font-['Urbanist']">10 Years</p>
-                        <p className="text-[#171717] font-medium text-xl font-display">Experience</p>
-                    </div>
+                {/* Buttons */}
+                <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2.5 z-20">
+                  <div className="w-[384px] h-20 p-2.5 bg-white/10 rounded-[50px] outline outline-2 outline-white backdrop-blur-[10px] flex justify-center items-center gap-2.5">
+                    <button className="w-52 px-5 py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-2xl font-medium font-['Lufga']">
+                      Portfolio
+                      <svg className="w-10 h-10 ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="flex-1 px-5 py-2.5 text-white text-2xl font-light font-['Lufga']">
+                      Hire me
+                    </button>
+                  </div>
                 </div>
-
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="bg-[#171717] rounded-t-[50px] py-28 px-4">
-        <div className="container mx-auto">
+          <div className="container mx-auto">
           <div className="flex justify-between items-end mb-16">
             <h2 className="text-[#FCFCFD] font-['Vast_Shadow'] text-5xl max-w-md">My Services</h2>
             <p className="text-white max-w-md text-lg">{lorem}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ServiceCard title="UI/ UX Design" iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
             <ServiceCard title="Web Design" iconBgUrl="/figma-images/service-web-design-bg.png" arrowIconBgColor="bg-[#1D2939]" />
             <ServiceCard title="Landing Page" iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
@@ -215,12 +259,12 @@ export default function Home() {
             <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
             <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
             <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
        <section className="py-28 px-4">
-        <div className="container mx-auto">
+          <div className="container mx-auto">
           <h2 className="text-center font-['Vast_Shadow'] text-6xl text-[#344054] mb-20">My Work Experience</h2>
           <div className="max-w-4xl mx-auto">
             <ExperienceItem
@@ -243,8 +287,8 @@ export default function Home() {
               description={lorem}
             />
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       <section className="bg-[#F2F4F7] rounded-[50px] py-28 px-4">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-16">
@@ -258,17 +302,17 @@ export default function Home() {
                     <div>
                         <p className="text-4xl font-medium text-[#FD853A] font-display">450+</p>
                         <p className="text-[#667085] text-lg">Project Completed</p>
-                    </div>
+                </div>
                      <div>
                         <p className="text-4xl font-medium text-[#FD853A] font-display">450+</p>
                         <p className="text-[#667085] text-lg">Positive Reviews</p>
-                    </div>
+              </div>
                 </div>
                  <Link href="#" className="bg-white text-[#151515] px-10 py-5 rounded-full font-semibold text-2xl border border-[#151515] hover:bg-gray-100 transition">
                     Hire me
                  </Link>
-           </div>
-        </div>
+              </div>
+                </div>
       </section>
 
        <section className="py-28 px-4">
@@ -278,7 +322,7 @@ export default function Home() {
                 <Link href="#" className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
                     See All
                 </Link>
-            </div>
+              </div>
 
             <ProjectCardFigma
               title="Lirante - Food Delivery Solution"
@@ -293,8 +337,8 @@ export default function Home() {
                 <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
                 <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       <section className="bg-[#171717] rounded-[50px] py-28 px-4 relative overflow-hidden">
 
@@ -330,7 +374,7 @@ export default function Home() {
       </section>
 
        <section className="py-28 px-4">
-        <div className="container mx-auto">
+          <div className="container mx-auto">
             <div className="flex justify-between items-center mb-12">
                  <div>
                     <h2 className="text-5xl font-bold text-[#344054] font-display">From my</h2>
@@ -363,8 +407,8 @@ export default function Home() {
                     title="Cinetrade: Innovative way to invest in Digital Media"
                 />
             </div>
-        </div>
-       </section>
+          </div>
+        </section>
 
       <section className="py-28 px-4">
         <div className="container mx-auto text-center">
@@ -394,57 +438,10 @@ export default function Home() {
                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>
                    <span>Certified Product Designer</span>
                </div>
-           </div>
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
 
-       <footer className="bg-[#272727] rounded-t-[24px] text-[#FCFCFD] py-6 px-4">
-           <div className="container mx-auto">
-               <div className="flex flex-col md:flex-row justify-between items-start gap-12 py-8">
-                   <div className="flex flex-col gap-6 max-w-xs">
-                       <div className="font-bold text-2xl">Logo</div>
-                       <p className="text-sm opacity-80">{lorem}</p>
-                       <div className="flex gap-4 mt-2">
-                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">F</Link>
-                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">Y</Link>
-                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">W</Link>
-                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">I</Link>
-                           <Link href="#" className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">T</Link>
-                       </div>
-                   </div>
-                   <div className="flex flex-col gap-5">
-                        <h5 className="text-[#FD853A] font-semibold text-lg">Navigation</h5>
-                        <Link href="#" className="hover:text-white/80 transition">Home</Link>
-                        <Link href="#" className="hover:text-white/80 transition">About Us</Link>
-                        <Link href="#" className="hover:text-white/80 transition">Service</Link>
-                        <Link href="#" className="hover:text-white/80 transition">Resume</Link>
-                        <Link href="#" className="hover:text-white/80 transition">Project</Link>
-                   </div>
-                   <div className="flex flex-col gap-5">
-                        <h5 className="text-[#FD853A] font-semibold text-lg">Contact</h5>
-                        <a href="tel:+201143637341" className="hover:text-white/80 transition">+20 11 43 63 73 41</a>
-                        <a href="mailto:fawzisayed1209@gmail.com" className="hover:text-white/80 transition">fawzisayed1209@gmail.com</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition">fawziuiux.com</a>
-                   </div>
-                   <div className="flex flex-col gap-5">
-                       <h5 className="text-[#FD853A] font-semibold text-lg">Get the latest information</h5>
-                       <div className="flex">
-                           <input type="email" placeholder="Email Address" className="bg-white text-[#000000] px-4 py-3 rounded-l-xl focus:outline-none w-48"/>
-                           <button className="bg-[#FD853A] px-4 py-3 rounded-r-xl flex items-center justify-center hover:bg-opacity-90 transition" title="Send">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.51995 4.23001L16.1 8.73001C19.9 11.07 19.9 12.94 16.1 15.28L9.51995 19.78C3.45995 23.2 1.72995 21.52 4.01995 15.56L5.33995 12.01L4.01995 8.45001C1.72995 2.49001 3.45995 0.810011 9.51995 4.23001Z" fill="#FCFCFD"/>
-                                </svg>
-                           </button>
-                       </div>
-                   </div>
-               </div>
-               <div className="border-t border-[#475467] mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm opacity-80">
-                   <p>Copyright© 2023 Fawziuiux. All Rights Reserved.</p>
-                   <p>User Terms & Conditions | Privacy Policy</p>
-               </div>
-           </div>
-       </footer>
-
-    </main>
+      </main>
   )
-}
+} 
