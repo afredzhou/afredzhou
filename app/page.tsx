@@ -11,7 +11,13 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, iconBgUrl, arrowIconBgColor }) => (
   <div className="relative bg-[#3C3C3C] rounded-[37px] overflow-hidden p-6 flex flex-col justify-between h-[450px]">
     <div className="absolute inset-0 z-0">
-      <Image src={iconBgUrl} alt="" layout="fill" objectFit="cover" className="rounded-[37px]" />
+      <Image 
+        src={iconBgUrl} 
+        alt="" 
+        fill
+        className="object-cover rounded-[37px]"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
     </div>
     <div className="relative z-10 flex justify-end">
@@ -62,7 +68,13 @@ interface ProjectCardFigmaProps {
 const ProjectCardFigma: React.FC<ProjectCardFigmaProps> = ({ title, imageUrl, tags, description }) => (
     <div className="flex flex-col md:flex-row gap-8 items-center">
       <div className="md:w-1/2 relative rounded-lg overflow-hidden h-[400px] md:h-auto">
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image 
+          src={imageUrl} 
+          alt={title} 
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
       <div className="md:w-1/2 flex flex-col gap-6">
          <div className="flex gap-3 flex-wrap">
@@ -92,7 +104,13 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, avatarUrl, nam
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-3">
         <div className="w-12 h-12 rounded-full overflow-hidden">
-          <Image src={avatarUrl} alt={name} width={48} height={48} objectFit="cover" />
+          <Image 
+            src={avatarUrl} 
+            alt={name} 
+            width={48} 
+            height={48} 
+            className="object-cover"
+          />
         </div>
         <div>
           <p className="font-bold text-lg">{name}</p>
@@ -121,7 +139,13 @@ interface BlogPostCardProps {
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date, title }) => (
     <div className="flex flex-col gap-4">
         <div className="relative h-60 rounded-xl overflow-hidden shadow-lg">
-            <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+            <Image 
+                src={imageUrl} 
+                alt={title} 
+                fill
+                className="object-cover" 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
             <div className="absolute top-4 right-4">
                  <Link href="#" className="flex items-center justify-center w-12 h-12 rounded-full bg-[#1D2939] hover:bg-[#344054] transition">
                      <ArrowUpRightIcon className="w-6 h-6 text-white" />
@@ -169,14 +193,20 @@ export default function Home() {
                 {/* Title */}
                 <div className="mt-8 text-center">
                   <h1 className="text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
-                    <span className="text-neutral-900">I'm </span>
+                    <span className="text-neutral-900">I&apos;m </span>
                     <span className="text-[#FD853A]">Afred</span>
                   </h1>
                   <div className="relative -mt-6">
                     <h1 className="text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
                       Product Designer
                     </h1>
-                    <img src="/figma-images/sparkle-left.svg" alt="" className="absolute -left-16 top-1/2 -translate-y-1/2 w-16 h-20 rotate-[-167.61deg]" />
+                    <Image 
+                      src="/figma-images/sparkle-left.svg" 
+                      alt="" 
+                      width={64}
+                      height={80}
+                      className="absolute -left-16 top-1/2 -translate-y-1/2 rotate-[-167.61deg]"
+                    />
                   </div>
                 </div>
               </div>
@@ -293,7 +323,13 @@ export default function Home() {
       <section className="bg-[#F2F4F7] rounded-[50px] py-28 px-4">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-16">
            <div className="md:w-1/2 relative h-[600px]">
-               <Image src="/figma-images/hero-bg-mask.png" alt="Hire me background" layout="fill" objectFit="contain" />
+               <Image 
+                 src="/figma-images/hero-bg-mask.png" 
+                 alt="Hire me background" 
+                 fill
+                 className="object-contain"
+                 sizes="(max-width: 768px) 100vw, 50vw"
+               />
            </div>
            <div className="md:w-1/2 flex flex-col gap-8 items-start">
                 <h2 className="text-6xl font-semibold text-[#344054] font-display">Why Hire me?</h2>
@@ -318,7 +354,7 @@ export default function Home() {
        <section className="py-28 px-4">
         <div className="container mx-auto">
             <div className="flex justify-between items-center mb-12">
-                <h2 className="text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">Let's have a look at my Portfolio</h2>
+                <h2 className="text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">Let&apos;s have a look at my Portfolio</h2>
                 <Link href="#" className="px-8 py-4 rounded-full bg-[#FD853A] text-white font-medium text-lg hover:bg-opacity-90 transition">
                     See All
                 </Link>
@@ -412,7 +448,7 @@ export default function Home() {
 
       <section className="py-28 px-4">
         <div className="container mx-auto text-center">
-           <h2 className="text-6xl font-semibold text-[#344054] mb-8 font-display max-w-3xl mx-auto">Have an Awesome Project Idea? Let's Discuss</h2>
+           <h2 className="text-6xl font-semibold text-[#344054] mb-8 font-display max-w-3xl mx-auto">Have an Awesome Project Idea? Let&apos;s Discuss</h2>
            <div className="flex justify-center mb-6">
                <div className="relative bg-white/10 border border-[#E4E7EC] rounded-full p-2 flex items-center shadow-lg w-full max-w-2xl">
                    <div className="bg-[#FFEAD5] w-16 h-14 rounded-full flex items-center justify-center mr-3">

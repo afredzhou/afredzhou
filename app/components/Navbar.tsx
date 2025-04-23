@@ -19,7 +19,14 @@ const Navbar = () => {
           </div>
 
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
-            <Image src="/figma-images/logo.svg" alt="JCREA" width={24} height={24} />
+            <Image 
+              src="/figma-images/logo.svg" 
+              alt="JCREA" 
+              width={24} 
+              height={24}
+              className="w-6 h-6"
+              priority
+            />
             <span className="text-white text-base font-medium">Afred</span>
           </Link>
 
