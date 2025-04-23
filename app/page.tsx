@@ -235,7 +235,7 @@ export default function Home() {
                       <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
                     </svg>
                   </div>
-                  <p className="text-[#344054] text-xl font-medium font-['Lufga']">Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
+                  <p className="text-[#344054] text-xl font-medium font-['Lufga']">Afred&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
                 </div>
 
                 {/* Rating and Experience */}
