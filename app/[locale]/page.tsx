@@ -168,7 +168,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
 
 export default function Home() {
   const t = useTranslations();
-   const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales";
+   // const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"; // Removed hardcoded lorem
 
   return (
     <main className="min-h-screen bg-white text-[#171717]">
@@ -181,7 +181,7 @@ export default function Home() {
             {/* Hello Badge */}
             <div className="inline-flex flex-col items-center">
               <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
-                <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">Hello!</span>
+                <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">{t('hero.greeting')}</span>
                 <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
             <Image
                     src="/figma-images/sparkle-hello.svg"
@@ -196,7 +196,7 @@ export default function Home() {
             {/* Title */}
             <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
-                <span className="text-neutral-900">I&apos;m </span>
+                <span className="text-neutral-900">{t('hero.iAm')}{' '}</span>
                 <span className="text-[#FD853A]">{t('site.name')}</span>
               </h1>
               <div className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4">
@@ -241,8 +241,8 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="text-right">
-                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">10 Years</p>
-                    <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">Experience</p>
+                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">{t('hero.experienceYears')}</p>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">{t('hero.experienceLabel')}</p>
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function Home() {
               <div className="relative z-10">
                 <Image
                   src="/figma-images/profile-image.png"
-                  alt={`${t('site.name')} Profile`}
+                  alt={`${t('site.name')} ${t('common.profile')}`}
                   width={952}
                   height={636}
                   className="block mx-auto w-full h-auto max-w-[952px]"
@@ -270,14 +270,14 @@ export default function Home() {
                 <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:w-[384px] p-1 sm:p-1.5 md:p-2 bg-white/10 rounded-[50px] outline outline-1 sm:outline-2 outline-white backdrop-blur-[10px] flex flex-row items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
                   {/* Portfolio Button */}
                   <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-xs sm:text-sm md:text-base font-medium font-['Lufga'] whitespace-nowrap">
-                    Portfolio
+                    {t('hero.portfolioButton')}
                     <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-1 sm:ml-1.5 md:ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </button>
                   {/* Hire Me Button */}
                   <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 text-white text-xs sm:text-sm md:text-base font-light font-['Lufga'] whitespace-nowrap hover:bg-white/10 rounded-[60px] transition-colors duration-200">
-                    Hire me
+                    {t('hero.hireMeButton')}
                   </button>
                 </div>
               </div>
@@ -288,13 +288,13 @@ export default function Home() {
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
-              <h2 className="text-[#FCFCFD] font-['Vast_Shadow'] text-3xl sm:text-4xl md:text-5xl max-w-sm md:max-w-md">My Services</h2>
-              <p className="text-white text-sm sm:text-base md:text-lg max-w-md">{lorem}</p>
+              <h2 className="text-[#FCFCFD] font-['Vast_Shadow'] text-3xl sm:text-4xl md:text-5xl max-w-sm md:max-w-md">{t('services.title')}</h2>
+              <p className="text-white text-sm sm:text-base md:text-lg max-w-md">{t('services.description')}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              <ServiceCard title="UI/ UX Design" iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
-              <ServiceCard title="Web Design" iconBgUrl="/figma-images/service-web-design-bg.png" arrowIconBgColor="bg-[#1D2939]" />
-              <ServiceCard title="Landing Page" iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
+              <ServiceCard title={t('services.uiUxDesign')} iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
+              <ServiceCard title={t('services.webDesign')} iconBgUrl="/figma-images/service-web-design-bg.png" arrowIconBgColor="bg-[#1D2939]" />
+              <ServiceCard title={t('services.landingPage')} iconBgUrl="/figma-images/service-ui-ux-bg.png" arrowIconBgColor="bg-[#1D2939]" />
             </div>
             <div className="flex justify-center gap-2 sm:gap-3 mt-8 sm:mt-10 md:mt-12">
               <div className="w-6 sm:w-8 h-2 bg-[#FD853A] rounded-full"></div>
@@ -307,26 +307,26 @@ export default function Home() {
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
-            <h2 className="text-center font-['Vast_Shadow'] text-4xl sm:text-5xl md:text-6xl text-[#344054] mb-12 sm:mb-16 md:mb-20">My Work Experience</h2>
+            <h2 className="text-center font-['Vast_Shadow'] text-4xl sm:text-5xl md:text-6xl text-[#344054] mb-12 sm:mb-16 md:mb-20">{t('experience.title')}</h2>
             <div className="max-w-4xl mx-auto">
               <ExperienceItem
                 company="Cognizant, Mumbai"
                 duration="Sep 2016 - July 2020"
-                role="Experience Designer"
-                description={lorem}
+                role={t('experience.roleExperienceDesigner')}
+                description={t('experience.descriptionCognizant')}
                 isActive={true}
               />
               <ExperienceItem
                 company="Sugee Pvt limited, Mumbai"
                 duration="Sep 2020 - July 2023"
-                role="UI/UX Designer"
-                description={lorem}
+                role={t('experience.roleUiUxDesigner')}
+                description={t('experience.descriptionSugee')}
               />
               <ExperienceItem
                 company="Cinetstox, Mumbai"
                 duration="Sep 2023"
-                role="Lead UX Designer"
-                description={lorem}
+                role={t('experience.roleLeadUxDesigner')}
+                description={t('experience.descriptionCinetstox')}
               />
             </div>
           </div>
@@ -344,20 +344,20 @@ export default function Home() {
                   />
                 </div>
           <div className="w-full md:w-1/2 flex flex-col gap-4 sm:gap-6 md:gap-8 items-start">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] font-display">Why Hire me?</h2>
-            <p className="text-base sm:text-lg text-[#98A2B3]">{lorem}</p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] font-display">{t('hireMe.title')}</h2>
+            <p className="text-base sm:text-lg text-[#98A2B3]">{t('hireMe.description')}</p>
             <div className="grid grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <p className="text-3xl sm:text-4xl font-medium text-[#FD853A] font-display">450+</p>
-                <p className="text-base sm:text-lg text-[#667085]">Project Completed</p>
+                <p className="text-base sm:text-lg text-[#667085]">{t('hireMe.projectsCompleted')}</p>
               </div>
               <div>
                 <p className="text-3xl sm:text-4xl font-medium text-[#FD853A] font-display">450+</p>
-                <p className="text-base sm:text-lg text-[#667085]">Positive Reviews</p>
+                <p className="text-base sm:text-lg text-[#667085]">{t('hireMe.positiveReviews')}</p>
               </div>
             </div>
             <Link href="#" className="bg-white text-[#151515] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-xl sm:text-2xl font-semibold border border-[#151515] hover:bg-gray-100 transition">
-              Hire me
+              {t('hireMe.hireMeButton')}
             </Link>
             </div>
           </div>
@@ -366,17 +366,17 @@ export default function Home() {
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">Let&apos;s have a look at my Portfolio</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">{t('portfolio.title')}</h2>
             <Link href="#" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FD853A] text-white text-base sm:text-lg font-medium hover:bg-opacity-90 transition">
-              See All
+              {t('portfolio.seeAllButton')}
             </Link>
           </div>
 
           <ProjectCardFigma
             title="Lirante - Food Delivery Solution"
             imageUrl="/figma-images/project-lirante-bg.png"
-            tags={["Landing Page", "Product Design", "Animation", "Glassmorphism", "Cards"]}
-            description={lorem}
+            tags={[t('portfolio.tags.landingPage'), t('portfolio.tags.productDesign'), t('portfolio.tags.animation'), t('portfolio.tags.glassmorphism'), t('portfolio.tags.cards')]}
+            description={t('portfolio.descriptionLirante')}
           />
 
           <div className="flex justify-center gap-2 sm:gap-3 mt-12 sm:mt-16">
@@ -391,29 +391,29 @@ export default function Home() {
       <section className="bg-[#171717] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="container mx-auto relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-[#FCFCFD] font-medium text-3xl sm:text-4xl md:text-5xl mb-4 font-display">Testimonials That Speak to My Results</h2>
-            <p className="text-[#F9FAFB] text-base sm:text-lg">{lorem}</p>
+            <h2 className="text-[#FCFCFD] font-medium text-3xl sm:text-4xl md:text-5xl mb-4 font-display">{t('testimonials.title')}</h2>
+            <p className="text-[#F9FAFB] text-base sm:text-lg">{t('testimonials.description')}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <TestimonialCard
-              quote={lorem + lorem}
+              quote={t('testimonials.quoteExample')}
               avatarUrl="/figma-images/testimonial-1-avatar.png"
               name="Fawzi Sayed"
-              role="UI/UX Designer"
+              role={t('experience.roleUiUxDesigner')}
               rating={5.0}
             />
             <TestimonialCard
-              quote={lorem + lorem}
+              quote={t('testimonials.quoteExample')}
               avatarUrl="/figma-images/testimonial-2-avatar.png"
               name="Fawzi Sayed"
-              role="UI/UX Designer"
+              role={t('experience.roleUiUxDesigner')}
               rating={5.0}
             />
             <TestimonialCard
-              quote={lorem + lorem}
+              quote={t('testimonials.quoteExample')}
               avatarUrl="/figma-images/testimonial-3-avatar.png"
               name="Fawzi Sayed"
-              role="UI/UX Designer"
+              role={t('experience.roleUiUxDesigner')}
               rating={5.0}
             />
             </div>
@@ -424,34 +424,33 @@ export default function Home() {
           <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#344054] font-display">From my</h2>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#344054] font-display">blog post</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#344054] font-display">{t('blog.title')}</h2>
             </div>
             <Link href="#" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FD853A] text-white text-base sm:text-lg font-medium hover:bg-opacity-90 transition">
-              See All
+              {t('portfolio.seeAllButton')}
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <BlogPostCard
               imageUrl="/figma-images/blog-post-1-bg.png"
-              tag="UI/UX Design"
-              author="Jayesh Patil"
+              tag={t('blog.tagUiUx')}
+              author={t('blog.authorJayesh')}
               date="10 Nov, 2023"
-              title="Design Unraveled: Behind the Scenes of UI/UX Magic"
+              title={t('blog.post1.title')}
             />
             <BlogPostCard
               imageUrl="/figma-images/blog-post-2-bg.png"
-              tag="App Design"
-              author="Jayesh Patil"
+              tag={t('blog.tagAppDesign')}
+              author={t('blog.authorJayesh')}
               date="09 Oct, 2023"
-              title="Sugee: Loan Management System for Rural Sector."
+              title={t('blog.post2.title')}
             />
             <BlogPostCard
               imageUrl="/figma-images/blog-post-3-bg.png"
-              tag="App Design"
-              author="Jayesh Patil"
+              tag={t('blog.tagAppDesign')}
+              author={t('blog.authorJayesh')}
               date="13 Aug, 2023"
-              title="Cinetrade: Innovative way to invest in Digital Media"
+              title={t('blog.post3.title')}
             />
             </div>
           </div>
@@ -459,7 +458,7 @@ export default function Home() {
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] mb-6 sm:mb-8 font-display max-w-3xl mx-auto">Have an Awesome Project Idea? Let&apos;s Discuss</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] mb-6 sm:mb-8 font-display max-w-3xl mx-auto">{t('cta.title')}</h2>
           <div className="flex justify-center mb-4 sm:mb-6">
             <div className="relative bg-white/10 border border-[#E4E7EC] rounded-full p-1.5 sm:p-2 flex items-center shadow-lg w-full max-w-xl sm:max-w-2xl">
               <div className="bg-[#FFEAD5] w-12 sm:w-16 h-10 sm:h-14 rounded-full flex items-center justify-center mr-2 sm:mr-3">
@@ -468,26 +467,26 @@ export default function Home() {
                   <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#FD853A" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <input type="email" placeholder="Enter Email Address" className="flex-grow bg-transparent focus:outline-none text-[#000000] placeholder-[#000000]/60 text-base sm:text-lg px-2"/>
-              <button className="bg-[#FD853A] text-white px-6 sm:px-8 py-2 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-opacity-90 transition">Send</button>
+              <input type="email" placeholder={t('cta.emailPlaceholder')} className="flex-grow bg-transparent focus:outline-none text-[#000000] placeholder-[#000000]/60 text-base sm:text-lg px-2"/>
+              <button className="bg-[#FD853A] text-white px-6 sm:px-8 py-2 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-opacity-90 transition">{t('cta.sendButton')}</button>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 text-[#000000] text-sm sm:text-base font-medium">
             <div className="flex items-center justify-center gap-2">
               <StarIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#FD853A]"/>
-              <span>4.9/5 Average Ratings</span>
+              <span>{t('cta.averageRatings')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5">
                 {/* ... SVG path ... */}
               </svg>
-              <span>25+ Winning Awards</span>
+              <span>{t('cta.winningAwards')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 sm:w-5 sm:h-5">
                 {/* ... SVG path ... */}
               </svg>
-              <span>Certified Product Designer</span>
+              <span>{t('cta.certifiedDesigner')}</span>
             </div>
           </div>
           </div>

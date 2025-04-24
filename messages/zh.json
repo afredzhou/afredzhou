@@ -9,7 +9,11 @@
   "footer": {
     "copyright": "© 2023 Next.js博客",
     "terms": "服务条款",
-    "privacy": "隐私政策"
+    "privacy": "隐私政策",
+    "description": "用热情和目标创造美丽的数字体验",
+    "navigationHeading": "导航",
+    "newsletterHeading": "获取最新信息",
+    "emailPlaceholder": "电子邮件地址"
   },
   "post": {
     "readMore": "阅读更多",
@@ -31,12 +35,12 @@
     }
   },
   "site": {
-    "name": "阿福",
-    "fullName": "阿福周",
+    "name": "小周",
+    "fullName": "周先生",
     "tagline": "产品设计师",
     "portfolio": "产品设计师作品集",
-    "testimonial": "阿福的出色产品设计确保了我们网站的成功。强烈推荐",
-    "copyright": "版权所有© 2025 阿福周。保留所有权利。"
+    "testimonial": "小周出色的产品设计确保了我们网站的成功。强烈推荐",
+    "copyright": "版权所有© 2025 小周。保留所有权利。"
   },
   "navigation": {
     "home": "首页",
@@ -50,12 +54,82 @@
   "common": {
     "readMore": "阅读更多",
     "loading": "加载中...",
-    "error": "发生错误"
+    "error": "发生错误",
+    "profile": "简介"
   },
-  "footer": {
-    "description": "用热情和目标创造美丽的数字体验",
-    "navigationHeading": "导航",
-    "newsletterHeading": "获取最新信息",
-    "emailPlaceholder": "电子邮件地址"
+  "hero": {
+    "greeting": "你好！",
+    "iAm": "我是",
+    "experienceYears": "10年",
+    "experienceLabel": "经验",
+    "portfolioButton": "作品集",
+    "hireMeButton": "雇佣我"
+  },
+  "services": {
+    "title": "我的服务",
+    "description": "[占位符] 服务描述文本。",
+    "uiUxDesign": "UI/UX 设计",
+    "webDesign": "网页设计",
+    "landingPage": "着陆页设计"
+  },
+  "experience": {
+    "title": "我的工作经历",
+    "roleExperienceDesigner": "体验设计师",
+    "descriptionCognizant": "[占位符] Cognizant 工作经历描述。",
+    "roleUiUxDesigner": "UI/UX 设计师",
+    "descriptionSugee": "[占位符] Sugee Pvt limited 工作经历描述。",
+    "roleLeadUxDesigner": "首席 UX 设计师",
+    "descriptionCinetstox": "[占位符] Cinetstox 工作经历描述。"
+  },
+  "hireMe": {
+    "title": "为什么选择我？",
+    "description": "[占位符] 解释为什么应该雇佣我。",
+    "projectsCompleted": "完成的项目",
+    "positiveReviews": "积极评价",
+    "hireMeButton": "雇佣我"
+  },
+  "portfolio": {
+    "title": "看看我的作品集",
+    "seeAllButton": "查看全部",
+    "tags": {
+      "landingPage": "着陆页",
+      "productDesign": "产品设计",
+      "animation": "动画",
+      "glassmorphism": "玻璃拟态",
+      "cards": "卡片"
+    },
+    "descriptionLirante": "[占位符] Lirante - 送餐解决方案的项目描述。"
+  },
+  "testimonials": {
+    "title": "结果证明一切的客户评价",
+    "description": "[占位符] 客户评价部分介绍。",
+    "quoteExample": "[占位符] 示例客户评价文本。"
+  },
+  "blog": {
+    "title": "来自我的博客文章",
+    "tagUiUx": "UI/UX 设计",
+    "authorJayesh": "Jayesh Patil",
+    "post1": {
+      "title": "设计揭秘：UI/UX 魔术幕后"
+    },
+    "tagAppDesign": "应用设计",
+    "post2": {
+      "title": "Sugee：面向农村地区的贷款管理系统"
+    },
+    "post3": {
+      "title": "Cinetrade：投资数字媒体的创新方式"
+    }
+  },
+  "cta": {
+    "title": "有很棒的项目想法？我们来讨论一下",
+    "emailPlaceholder": "输入电子邮件地址",
+    "sendButton": "发送",
+    "averageRatings": "平均评分 4.9/5",
+    "winningAwards": "荣获 25+ 奖项",
+    "certifiedDesigner": "认证产品设计师"
+  },
+  "localeSwitcher": {
+    "en": "EN",
+    "zh": "中文"
   }
 }

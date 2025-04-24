@@ -53,6 +53,9 @@
     "error": "An error occurred"
   },
   "footer": {
+    "copyright": "© 2023 Next.js Blog",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
     "description": "Creating beautiful digital experiences with passion and purpose.",
     "navigationHeading": "Navigation",
     "newsletterHeading": "Get the latest information",
