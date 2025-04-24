@@ -7,7 +7,7 @@ import { routing } from '../../i18n/routing';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
-
+import { getMessages } from 'next-intl/server';
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   const siteName = t('site.name') || 'Default Site Name';
   const portfolio = t('site.portfolio') || 'Portfolio';
   const description = t('description') || 'Default description';
-
   return {
     title: `${siteName} - ${portfolio}`,
     description: description,
@@ -49,6 +48,7 @@ export default async function RootLayout({
 
   // Enable static rendering
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -59,8 +59,7 @@ export default async function RootLayout({
       </head>
       <body>
         {/* Provider does not need explicit messages prop here */}
-        <NextIntlClientProvider locale={locale}>
-          <Template>{children}</Template>
+        <NextIntlClientProvider locale={locale} messages={messages}>          <Template>{children}</Template>
           <LanguageSwitch />
           <Analytics />
         </NextIntlClientProvider>
