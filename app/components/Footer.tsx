@@ -1,6 +1,16 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+  
+  // Don't render footer in studio routes
+  if (pathname?.startsWith('/studio')) {
+    return null
+  }
+
   return (
     <footer className="bg-[#2B2B2B] text-white py-16">
       <div className="container mx-auto px-4">
