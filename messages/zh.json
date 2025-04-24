@@ -37,5 +37,25 @@
     "portfolio": "产品设计师作品集",
     "testimonial": "阿福的出色产品设计确保了我们网站的成功。强烈推荐",
     "copyright": "版权所有© 2025 阿福周。保留所有权利。"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "blog": "博客",
+    "contact": "联系",
+    "service": "服务",
+    "resume": "简历",
+    "project": "项目"
+  },
+  "common": {
+    "readMore": "阅读更多",
+    "loading": "加载中...",
+    "error": "发生错误"
+  },
+  "footer": {
+    "description": "用热情和目标创造美丽的数字体验",
+    "navigationHeading": "导航",
+    "newsletterHeading": "获取最新信息",
+    "emailPlaceholder": "电子邮件地址"
   }
 }

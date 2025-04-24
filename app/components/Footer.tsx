@@ -1,11 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useTranslation } from 'next-i18next'
-
+import { useTranslations } from 'next-intl'
 export default function Footer() {
-  const { t } = useTranslation('common')
-  
+  const t = useTranslations();
   return (
     <footer className="bg-[#2B2B2B] text-white py-16">
       <div className="container mx-auto px-4">
@@ -14,7 +12,7 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="text-xl font-bold mb-4">{t('site.fullName')}</h3>
             <p className="text-gray-400 mb-6">
-              Creating beautiful digital experiences with passion and purpose.
+              {t('footer.description')}
             </p>
             {/* Social Media Links */}
             <div className="flex space-x-4">
@@ -38,13 +36,13 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="col-span-1">
-            <h4 className="text-orange-500 font-semibold mb-4">Navigation</h4>
+            <h4 className="text-orange-500 font-semibold mb-4">{t('footer.navigationHeading')}</h4>
             <ul className="space-y-3">
               <li><Link href="/" className="text-gray-400 hover:text-white">{t('header.home')}</Link></li>
               <li><Link href="/about" className="text-gray-400 hover:text-white">{t('header.about')}</Link></li>
-              <li><Link href="/service" className="text-gray-400 hover:text-white">Service</Link></li>
-              <li><Link href="/resume" className="text-gray-400 hover:text-white">Resume</Link></li>
-              <li><Link href="/project" className="text-gray-400 hover:text-white">Project</Link></li>
+              <li><Link href="/service" className="text-gray-400 hover:text-white">{t('navigation.service')}</Link></li>
+              <li><Link href="/resume" className="text-gray-400 hover:text-white">{t('navigation.resume')}</Link></li>
+              <li><Link href="/project" className="text-gray-400 hover:text-white">{t('navigation.project')}</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('header.contact')}</Link></li>
             </ul>
           </div>
@@ -69,11 +67,11 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div className="col-span-1">
-            <h4 className="text-orange-500 font-semibold mb-4">Get the latest information</h4>
+            <h4 className="text-orange-500 font-semibold mb-4">{t('footer.newsletterHeading')}</h4>
             <div className="flex">
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder={t('footer.emailPlaceholder')}
                 className="flex-1 px-4 py-3 bg-white text-[#000000] placeholder-[#000000]/60 focus:outline-none rounded-l-lg"
               />
               <button
@@ -100,4 +98,4 @@ export default function Footer() {
       </div>
     </footer>
   )
-} 
+}

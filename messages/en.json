@@ -37,5 +37,25 @@
     "portfolio": "Product Designer Portfolio",
     "testimonial": "Afred's Exceptional product design ensure our website's success. Highly Recommended",
     "copyright": "Copyright© 2025 Afred Zhou. All Rights Reserved."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "service": "Service",
+    "resume": "Resume",
+    "project": "Project"
+  },
+  "common": {
+    "readMore": "Read More",
+    "loading": "Loading...",
+    "error": "An error occurred"
+  },
+  "footer": {
+    "description": "Creating beautiful digital experiences with passion and purpose.",
+    "navigationHeading": "Navigation",
+    "newsletterHeading": "Get the latest information",
+    "emailPlaceholder": "Email Address"
   }
 }

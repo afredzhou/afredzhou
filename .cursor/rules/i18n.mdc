@@ -1,10 +1,10 @@
 ---
-description: 
-globs: 
+description:
+globs:
 alwaysApply: false
 ---
-### 📁 i18n rules
+### 📁 i18n 国际化 rules
 
 - 默认的语言url英语不加语言代码
 - /studio下面的相关页面,不需要国际化
-- 用next-i18n
+- 用Next-intl国际化

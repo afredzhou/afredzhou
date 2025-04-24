@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { StarIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
-import { useTranslation } from 'next-i18next'
-
+import { useTranslations } from 'next-intl'
 interface ServiceCardProps {
   title: string;
   iconBgUrl: string;
@@ -14,9 +13,9 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, iconBgUrl, arrowIconBgColor }) => (
   <div className="relative bg-[#3C3C3C] rounded-[20px] sm:rounded-[30px] md:rounded-[37px] overflow-hidden p-4 sm:p-5 md:p-6 flex flex-col justify-between h-[300px] sm:h-[375px] md:h-[450px]">
     <div className="absolute inset-0 z-0">
-      <Image 
-        src={iconBgUrl} 
-        alt="" 
+      <Image
+        src={iconBgUrl}
+        alt=""
         fill
         className="object-cover rounded-[20px] sm:rounded-[30px] md:rounded-[37px]"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -71,9 +70,9 @@ interface ProjectCardFigmaProps {
 const ProjectCardFigma: React.FC<ProjectCardFigmaProps> = ({ title, imageUrl, tags, description }) => (
     <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
       <div className="w-full md:w-1/2 relative rounded-lg overflow-hidden h-[250px] sm:h-[300px] md:h-[400px]">
-        <Image 
-          src={imageUrl} 
-          alt={title} 
+        <Image
+          src={imageUrl}
+          alt={title}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -107,11 +106,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, avatarUrl, nam
     <div className="flex justify-between items-center">
       <div className="flex items-center gap-2 sm:gap-3">
         <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden">
-          <Image 
-            src={avatarUrl} 
-            alt={name} 
-            width={48} 
-            height={48} 
+          <Image
+            src={avatarUrl}
+            alt={name}
+            width={48}
+            height={48}
             className="object-cover"
           />
         </div>
@@ -142,11 +141,11 @@ interface BlogPostCardProps {
 const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date, title }) => (
     <div className="flex flex-col gap-3 sm:gap-4">
         <div className="relative h-48 sm:h-52 md:h-60 rounded-xl overflow-hidden shadow-lg">
-            <Image 
-                src={imageUrl} 
-                alt={title} 
+            <Image
+                src={imageUrl}
+                alt={title}
                 fill
-                className="object-cover" 
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
@@ -168,15 +167,15 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
 );
 
 export default function Home() {
-  const { t } = useTranslation('common')
-  const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales";
+  const t = useTranslations();
+   const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales";
 
   return (
     <main className="min-h-screen bg-white text-[#171717]">
       {/* Navigation Bar  No need for this because we are using the navigation bar from the layout.tsx */}
         {/* Hero Section */}
       <section className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
-        <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto"> 
+        <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto">
           {/* Content Container */}
           <div className="flex-1 relative w-full flex flex-col items-center">
             {/* Hello Badge */}
@@ -185,9 +184,9 @@ export default function Home() {
                 <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">Hello!</span>
                 <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
             <Image
-                    src="/figma-images/sparkle-hello.svg" 
-                    alt="" 
-                    width={24} 
+                    src="/figma-images/sparkle-hello.svg"
+                    alt=""
+                    width={24}
                     height={24}
                     className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                   />
@@ -206,8 +205,8 @@ export default function Home() {
                 </h1>
                 {/* Left Sparkle */}
                 <Image
-                  src="/figma-images/sparkle-left.svg" 
-                  alt="" 
+                  src="/figma-images/sparkle-left.svg"
+                  alt=""
                   width={64}
                   height={80}
                   className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 w-6 h-8 sm:w-8 sm:h-10 md:w-12 md:h-16 lg:w-16 lg:h-20 rotate-[-167.61deg]"
@@ -337,8 +336,8 @@ export default function Home() {
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
           <div className="w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
                   <Image
-              src="/figma-images/hero-bg-mask.png" 
-              alt="Hire me background" 
+              src="/figma-images/hero-bg-mask.png"
+              alt="Hire me background"
                     fill
                     className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -496,4 +495,4 @@ export default function Home() {
 
       </main>
   )
-} 
+}
