@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { StarIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import { useTranslations } from 'next-intl'
+
 interface ServiceCardProps {
   title: string;
   iconBgUrl: string;
@@ -167,7 +168,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
 );
 
 export default function Home() {
-  const t = useTranslations();
+  const t = useTranslations('sections');
    // const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"; // Removed hardcoded lorem
 
   return (

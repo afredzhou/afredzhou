@@ -25,6 +25,9 @@
     "cancel": "取消"
   },
   "sections": {
+    "hero":{
+      "greeting":"你好"
+    },
     "header": "页眉导航",
     "footer": "页脚",
     "buttons": "按钮"

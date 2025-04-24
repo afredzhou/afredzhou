@@ -21,6 +21,9 @@
     "cancel": "Cancel"
   },
   "sections": {
+    "hero":{
+      "greeting":"hello"
+    },
     "header": "Header Navigation",
     "footer": "Footer",
     "buttons": "Buttons"
