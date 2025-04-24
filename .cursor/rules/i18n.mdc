@@ -1,0 +1,9 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+### 📁 i18n rules
+
+- i18n的路由,默认的语言英语不加语言代码
+- /studio下面的相关页面,不需要国际化
