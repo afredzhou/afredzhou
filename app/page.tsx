@@ -170,9 +170,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-[#171717]">
       {/* Navigation Bar  No need for this because we are using the navigation bar from the layout.tsx */}
-    
-
-      {/* Hero Section */}
+        {/* Hero Section */}
       <section className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
         <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto"> 
           {/* Content Container */}
@@ -182,7 +180,7 @@ export default function Home() {
               <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
                 <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">Hello!</span>
                 <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
-                  <Image
+            <Image
                     src="/figma-images/sparkle-hello.svg" 
                     alt="" 
                     width={24} 
@@ -192,7 +190,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             {/* Title */}
             <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
@@ -224,9 +221,9 @@ export default function Home() {
                       <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
                     </svg>
                   </div>
-                  <p className="font-medium font-['Lufga'] leading-tight">Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
-                </div>
-              </div>
+                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-lg">Afred&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
+            </div>
+          </div>
 
               <div className="absolute -top-16 sm:static right-4 sm:right-12 md:right-24 lg:right-[5%] xl:right-0 w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
                 {/* Experience */}
@@ -246,7 +243,7 @@ export default function Home() {
               </div>
             </div>
             {/* Profile Image & Background */}
-            <div className="relative w-full  mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-52">
+            <div className="relative w-full  mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80">
               {/* Background Circle */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0"></div>
 
@@ -279,10 +276,10 @@ export default function Home() {
                   </button>
                 </div>
               </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
@@ -301,7 +298,7 @@ export default function Home() {
               <div className="w-2 h-2 bg-[#E4E7EC] rounded-full"></div>
             </div>
           </div>
-      </section>
+        </section>
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
@@ -328,19 +325,19 @@ export default function Home() {
               />
             </div>
           </div>
-      </section>
+        </section>
 
       <section className="bg-[#F2F4F7] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
           <div className="w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
-            <Image
+                  <Image
               src="/figma-images/hero-bg-mask.png" 
               alt="Hire me background" 
-              fill
-              className="object-contain"
+                    fill
+                    className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+                  />
+                </div>
           <div className="w-full md:w-1/2 flex flex-col gap-4 sm:gap-6 md:gap-8 items-start">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] font-display">Why Hire me?</h2>
             <p className="text-base sm:text-lg text-[#98A2B3]">{lorem}</p>
@@ -357,12 +354,12 @@ export default function Home() {
             <Link href="#" className="bg-white text-[#151515] px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full text-xl sm:text-2xl font-semibold border border-[#151515] hover:bg-gray-100 transition">
               Hire me
             </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
+          <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#344054] font-display max-w-lg leading-tight">Let&apos;s have a look at my Portfolio</h2>
             <Link href="#" className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-[#FD853A] text-white text-base sm:text-lg font-medium hover:bg-opacity-90 transition">
@@ -414,12 +411,12 @@ export default function Home() {
               role="UI/UX Designer"
               rating={5.0}
             />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
+          <div className="container mx-auto">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#344054] font-display">From my</h2>
@@ -451,12 +448,12 @@ export default function Home() {
               date="13 Aug, 2023"
               title="Cinetrade: Innovative way to invest in Digital Media"
             />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto text-center">
+          <div className="container mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#344054] mb-6 sm:mb-8 font-display max-w-3xl mx-auto">Have an Awesome Project Idea? Let&apos;s Discuss</h2>
           <div className="flex justify-center mb-4 sm:mb-6">
             <div className="relative bg-white/10 border border-[#E4E7EC] rounded-full p-1.5 sm:p-2 flex items-center shadow-lg w-full max-w-xl sm:max-w-2xl">
@@ -488,9 +485,9 @@ export default function Home() {
               <span>Certified Product Designer</span>
             </div>
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-    </main>
+      </main>
   )
 } 
