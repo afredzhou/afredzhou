@@ -4,11 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import { useTranslation } from 'next-i18next'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { t } = useTranslation('common')
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -25,10 +23,10 @@ const Navbar = () => {
           {/* Left Links - Hidden on Mobile */}
           <div className="hidden md:flex items-center gap-8"> 
             <Link href="/" className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium">
-              {t('header.home')}
+              Home
             </Link>
             <Link href="/about" className="text-white text-base font-medium">
-              {t('header.about')}
+              About
             </Link>
             <Link href="/service" className="text-white text-base font-medium">
               Service
@@ -42,13 +40,13 @@ const Navbar = () => {
           <Link href="/" className="flex items-center gap-2">
             <Image 
               src="/figma-images/logo.svg" 
-              alt={t('site.name')} 
+              alt="JCREA" 
               width={24} 
               height={24}
               className="w-6 h-6"
               priority
             />
-            <span className="text-white text-base font-medium">{t('site.name')}</span>
+            <span className="text-white text-base font-medium">Afred</span>
           </Link>
           
           {/* Spacer - Hidden on Mobile */}
@@ -63,7 +61,7 @@ const Navbar = () => {
               Project
             </Link>
             <Link href="/contact" className="text-white text-base font-medium">
-              {t('header.contact')}
+              Contact
             </Link>
           </div>
 
@@ -83,10 +81,10 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-2 bg-[#151515] rounded-lg shadow-lg py-4 flex flex-col items-center gap-4">
             <Link href="/" onClick={closeMenu} className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium w-4/5 text-center">
-              {t('header.home')}
+              Home
             </Link>
             <Link href="/about" onClick={closeMenu} className="text-white text-base font-medium py-2">
-              {t('header.about')}
+              About
             </Link>
             <Link href="/service" onClick={closeMenu} className="text-white text-base font-medium py-2">
               Service
@@ -98,7 +96,7 @@ const Navbar = () => {
               Project
             </Link>
             <Link href="/contact" onClick={closeMenu} className="text-white text-base font-medium py-2">
-              {t('header.contact')}
+              Contact
             </Link>
           </div>
         )}

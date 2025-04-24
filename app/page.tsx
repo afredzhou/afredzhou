@@ -1,6 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { StarIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
+import { useTranslation } from 'next-i18next'
 
 interface ServiceCardProps {
   title: string;
@@ -165,6 +168,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
 );
 
 export default function Home() {
+  const { t } = useTranslation('common')
   const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales";
 
   return (
@@ -194,11 +198,11 @@ export default function Home() {
             <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
                 <span className="text-neutral-900">I&apos;m </span>
-                <span className="text-[#FD853A]">Afred</span>
+                <span className="text-[#FD853A]">{t('site.name')}</span>
               </h1>
               <div className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
-                  Product Designer
+                  {t('site.tagline')}
                 </h1>
                 {/* Left Sparkle */}
                 <Image
@@ -221,7 +225,9 @@ export default function Home() {
                       <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
                     </svg>
                   </div>
-                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">Afred&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
+                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">
+                    {t('site.testimonial')}
+                  </p>
             </div>
           </div>
 
@@ -251,7 +257,7 @@ export default function Home() {
               <div className="relative z-10">
                 <Image
                   src="/figma-images/profile-image.png"
-                  alt="Afred Profile"
+                  alt={`${t('site.name')} Profile`}
                   width={952}
                   height={636}
                   className="block mx-auto w-full h-auto max-w-[952px]"

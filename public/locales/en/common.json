@@ -1,0 +1,41 @@
+{
+  "title": "Blog with Sanity and Next.js",
+  "description": "This is a blog built with Next.js and Sanity",
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2023 Next.js Blog",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "post": {
+    "readMore": "Read More",
+    "publishedAt": "Published at",
+    "relatedPosts": "Related Posts"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "sections": {
+    "header": "Header Navigation",
+    "footer": "Footer",
+    "buttons": "Buttons"
+  },
+  "tools": {
+    "textSummarizer": {
+      "description": "AI-powered text summarization tool"
+    }
+  },
+  "site": {
+    "name": "Afred",
+    "fullName": "Afred Zhou",
+    "tagline": "Product Designer",
+    "portfolio": "Product Designer Portfolio",
+    "testimonial": "Afred's Exceptional product design ensure our website's success. Highly Recommended",
+    "copyright": "Copyright© 2025 Afred Zhou. All Rights Reserved."
+  }
+}

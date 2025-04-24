@@ -3,6 +3,7 @@ import '../tailwind.css'
 import { VisualEditing } from '@sanity/visual-editing/next-pages-router'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
+import { appWithTranslation } from 'next-i18next'
 
 export interface SharedPageProps {
   draftMode: boolean
@@ -11,7 +12,7 @@ export interface SharedPageProps {
 
 const PreviewProvider = dynamic(() => import('components/PreviewProvider'))
 
-export default function App({
+function App({
   Component,
   pageProps,
 }: AppProps<SharedPageProps>) {
@@ -29,3 +30,5 @@ export default function App({
     </>
   )
 }
+
+export default appWithTranslation(App)

@@ -1,15 +1,18 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 
 export default function Footer() {
+  const { t } = useTranslation('common')
+  
   return (
     <footer className="bg-[#2B2B2B] text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="col-span-1">
-            <h3 className="text-xl font-bold mb-4">Afred Zhou</h3>
+            <h3 className="text-xl font-bold mb-4">{t('site.fullName')}</h3>
             <p className="text-gray-400 mb-6">
               Creating beautiful digital experiences with passion and purpose.
             </p>
@@ -37,18 +40,18 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="text-orange-500 font-semibold mb-4">Navigation</h4>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white">{t('header.home')}</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">{t('header.about')}</Link></li>
               <li><Link href="/service" className="text-gray-400 hover:text-white">Service</Link></li>
               <li><Link href="/resume" className="text-gray-400 hover:text-white">Resume</Link></li>
               <li><Link href="/project" className="text-gray-400 hover:text-white">Project</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('header.contact')}</Link></li>
             </ul>
           </div>
 
           {/* Contact Information */}
           <div className="col-span-1">
-            <h4 className="text-orange-500 font-semibold mb-4">Contact</h4>
+            <h4 className="text-orange-500 font-semibold mb-4">{t('header.contact')}</h4>
             <ul className="space-y-3 text-gray-400">
               <li>+1 209 597 3212</li>
               <li>
@@ -86,11 +89,11 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-[#3B3B3B] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <p>Copyright© 2025 Afred Zhou. All Rights Reserved.</p>
+            <p>{t('site.copyright')}</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/terms" className="hover:text-white">User Terms & Conditions</Link>
+              <Link href="/terms" className="hover:text-white">{t('footer.terms')}</Link>
               <span>|</span>
-              <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+              <Link href="/privacy" className="hover:text-white">{t('footer.privacy')}</Link>
             </div>
           </div>
         </div>

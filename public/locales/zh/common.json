@@ -1,0 +1,41 @@
+{
+  "title": "Sanity和Next.js构建的博客",
+  "description": "这是一个使用Next.js和Sanity构建的博客",
+  "header": {
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "footer": {
+    "copyright": "© 2023 Next.js博客",
+    "terms": "服务条款",
+    "privacy": "隐私政策"
+  },
+  "post": {
+    "readMore": "阅读更多",
+    "publishedAt": "发布于",
+    "relatedPosts": "相关文章"
+  },
+  "buttons": {
+    "submit": "提交",
+    "cancel": "取消"
+  },
+  "sections": {
+    "header": "页眉导航",
+    "footer": "页脚",
+    "buttons": "按钮"
+  },
+  "tools": {
+    "textSummarizer": {
+      "description": "基于人工智能的文本摘要工具"
+    }
+  },
+  "site": {
+    "name": "阿福",
+    "fullName": "阿福周",
+    "tagline": "产品设计师",
+    "portfolio": "产品设计师作品集",
+    "testimonial": "阿福的出色产品设计确保了我们网站的成功。强烈推荐",
+    "copyright": "版权所有© 2025 阿福周。保留所有权利。"
+  }
+}

@@ -1,33 +1,27 @@
-import type { Metadata } from 'next'
+'use client'
+
 import './globals.css'
 import Template from './components/Template'
 import { Analytics } from "@vercel/analytics/react"
-export const metadata: Metadata = {
-  title: 'Afred - Product Designer Portfolio',
-  description: 'Portfolio website showcasing UI/UX and product design work',
-  icons: {
-    icon: [
-      {
-        url: '/favicon/favicon_32x32.png',
-        sizes: '32x32',
-        type: 'image/png'
-      },
-      {
-        url: '/favicon/favicon_256x256.png',
-        sizes: '256x256',
-        type: 'image/png'
-      }
-    ]
-  }
-}
+import LanguageSwitch from './LanguageSwitch'
+import { useTranslation } from 'next-i18next'
+import Head from 'next/head'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { t, i18n } = useTranslation('common')
+  const currentLocale = i18n.language || 'en'
+  
   return (
-    <html lang="en">
+    <html lang={currentLocale}>
+      <Head>
+        <title>{t('site.name')} - {t('site.portfolio')}</title>
+        <meta name="description" content={t('description')} />
+        <link rel="icon" href="/favicon/favicon_32x32.png" />
+      </Head>
       <head>
         <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Urbanist:wght@400;500;600;700&display=swap" />
         <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Vast+Shadow&display=swap" />
@@ -35,6 +29,7 @@ export default function RootLayout({
       </head>
       <body>
         <Template>{children}</Template>
+        <LanguageSwitch />
         <Analytics />
       </body>
     </html>
