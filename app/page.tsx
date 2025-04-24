@@ -221,7 +221,7 @@ export default function Home() {
                       <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
                     </svg>
                   </div>
-                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-lg">Afred&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
+                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">Afred&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
             </div>
           </div>
 

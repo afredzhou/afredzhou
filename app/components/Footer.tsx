@@ -94,7 +94,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-[#3B3B3B] mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <p>Copyright© 2024 Afred Zhou. All Rights Reserved.</p>
+            <p>Copyright© 2025 Afred Zhou. All Rights Reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link href="/terms" className="hover:text-white">User Terms & Conditions</Link>
               <span>|</span>
