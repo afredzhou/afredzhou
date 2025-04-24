@@ -48,15 +48,15 @@ export default function Footer() {
           <div className="col-span-1">
             <h4 className="text-orange-500 font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-gray-400">
-              <li>+20 11 43 63 73 41</li>
+              <li>+1 209 597 3212</li>
               <li>
-                <a href="mailto:hello@afred.me" className="hover:text-white">
-                  hello@afred.me
+                <a href="mailto:info@afredzhou.com" className="hover:text-white">
+                  info@afredzhou.com
                 </a>
               </li>
               <li>
-                <a href="https://afred.me" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-                  afred.me
+                <a href="https://afredzhou.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  afredzhou.com
                 </a>
               </li>
             </ul>
