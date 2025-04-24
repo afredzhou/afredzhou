@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Template from './components/Template'
-
+import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
   title: 'Afred - Product Designer Portfolio',
   description: 'Portfolio website showcasing UI/UX and product design work',
@@ -35,6 +35,7 @@ export default function RootLayout({
       </head>
       <body>
         <Template>{children}</Template>
+        <Analytics />
       </body>
     </html>
   )
