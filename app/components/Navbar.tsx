@@ -48,7 +48,7 @@ const Navbar = () => {
             />
             <span className="text-white text-base font-medium">Afred</span>
           </Link>
-
+          
           {/* Spacer - Hidden on Mobile */}
           <div className="flex-grow hidden md:block"></div>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
               ) : (
                 <Bars3Icon className="h-6 w-6" />
               )}
-            </button>
+          </button>
           </div>
         </div>
 
@@ -103,6 +103,6 @@ const Navbar = () => {
       </div>
     </nav>
   )
-}
+} 
 
 export default Navbar 

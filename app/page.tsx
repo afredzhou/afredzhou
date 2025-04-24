@@ -169,122 +169,120 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-[#171717]">
-      {/* Hero Section - Responsive padding and overflow control */}
-      <section className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 md:pt-8 lg:pt-12 pb-0 overflow-hidden">
-        <div className="relative w-full h-full flex flex-col items-center"> 
+      {/* Navigation Bar  No need for this because we are using the navigation bar from the layout.tsx */}
+    
+
+      {/* Hero Section */}
+      <section className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
+        <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto"> 
           {/* Content Container */}
           <div className="flex-1 relative w-full flex flex-col items-center">
-            {/* Hello Text */}
-            <div className="flex justify-center mt-4 sm:mt-6 md:mt-8">
-              <div className="inline-flex flex-col items-center">
-                {/* Hello Badge - Responsive sizing */}
-                <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
-                  <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">Hello!</span>
-                  <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
-                    <Image
-                      src="/figma-images/sparkle-hello.svg" 
-                      alt="" 
-                      width={24} 
-                      height={24}
-                      className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                    />
-                  </div>
-                </div>
-          
-                {/* Title - Responsive text sizes */}
-                <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
-                    <span className="text-neutral-900">I&apos;m </span>
-                    <span className="text-[#FD853A]">Afred</span>
-                  </h1>
-                  <div className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4">
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
-                      Product Designer
-                    </h1>
-                    {/* Sparkle - Responsive positioning and size */}
-                    <Image
-                      src="/figma-images/sparkle-left.svg" 
-                      alt="" 
-                      width={64}
-                      height={80}
-                      className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 w-6 h-8 sm:w-8 sm:h-10 md:w-12 md:h-16 lg:w-16 lg:h-20 rotate-[-167.61deg]"
-                    />
-                  </div>
+            {/* Hello Badge */}
+            <div className="inline-flex flex-col items-center">
+              <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
+                <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">Hello!</span>
+                <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
+                  <Image
+                    src="/figma-images/sparkle-hello.svg" 
+                    alt="" 
+                    width={24} 
+                    height={24}
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                  />
                 </div>
               </div>
             </div>
 
-            {/* Container for elements below title */}
-            <div className="mt-4 sm:mt-6 md:mt-8 w-full flex flex-col items-center"> 
-                
-              {/* Row for Testimonial & Experience - Responsive spacing and sizing */}
-              <div className="w-full max-w-4xl flex justify-between items-start gap-2 sm:gap-4 mb-2 sm:mb-4 px-4"> 
-                  {/* Testimonial */}
-                  <div className="flex flex-col gap-1 sm:gap-2 max-w-[120px] sm:max-w-[150px] md:max-w-[200px] text-[10px] sm:text-xs md:text-sm text-[#344054]"> 
-                      <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 relative self-start"> 
-                        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
-                        </svg>
-                      </div>
-                      <p className="font-medium font-['Lufga'] leading-tight">Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
-                  </div>
+            {/* Title */}
+            <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
+                <span className="text-neutral-900">I&apos;m </span>
+                <span className="text-[#FD853A]">Afred</span>
+              </h1>
+              <div className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
+                  Product Designer
+                </h1>
+                {/* Left Sparkle */}
+                <Image
+                  src="/figma-images/sparkle-left.svg" 
+                  alt="" 
+                  width={64}
+                  height={80}
+                  className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 w-6 h-8 sm:w-8 sm:h-10 md:w-12 md:h-16 lg:w-16 lg:h-20 rotate-[-167.61deg]"
+                />
+              </div>
+            </div>
 
-                  {/* Rating and Experience */}
-                  <div className="flex flex-col items-end gap-1 sm:gap-2 max-w-[120px] sm:max-w-[150px] md:max-w-[200px] text-right"> 
-                      <div className="flex gap-0.5 sm:gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5"> 
-                            <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 mx-auto my-0.5 sm:my-1 bg-[#FD853A]"></div> 
-                          </div>
-                        ))}
-                      </div>
-                      <div>
-                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">10 Years</p>
-                        <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">Experience</p>
-                      </div>
+            {/* Testimonial & Experience Row */}
+            <div className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-40 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative">
+              <div className="absolute -top-16 sm:static left-4 sm:left-12 md:left-24 lg:left-[5%] xl:left-0 w-[120px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
+                {/* Testimonial */}
+                <div className="flex flex-col gap-1 sm:gap-2 text-[10px] sm:text-xs md:text-sm text-[#344054]">
+                  <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 relative self-start">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2"/>
+                    </svg>
                   </div>
+                  <p className="font-medium font-['Lufga'] leading-tight">Jenny&apos;s Exceptional product design ensure our website&apos;s success. Highly Recommended</p>
+                </div>
               </div>
 
-              {/* Main Content Area (Image, Buttons) */}
-              <div className="relative w-full max-w-[812px] mx-auto -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16"> 
-                  {/* Background Circle - Responsive sizing */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:w-[812px] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0"></div> 
+              <div className="absolute -top-16 sm:static right-4 sm:right-12 md:right-24 lg:right-[5%] xl:right-0 w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
+                {/* Experience */}
+                <div className="flex flex-col items-end gap-1 sm:gap-2">
+                  <div className="flex gap-0.5 sm:gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 mx-auto my-0.5 sm:my-1 bg-[#FD853A]"></div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">10 Years</p>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">Experience</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Profile Image & Background */}
+            <div className="relative w-full  mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-52">
+              {/* Background Circle */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0"></div>
 
-                  {/* Profile Image Container */}
-                  <div className="relative z-10"> 
-                    <Image
-                      src="/figma-images/profile-image.png" 
-                      alt="Afred Profile" 
-                      width={952} 
-                      height={636} 
-                      className="block mx-auto w-full h-auto max-w-[952px]"
-                      priority 
-                      sizes="(max-width: 640px) 95vw, (max-width: 1024px) 85vw, 952px"
-                    />
-                  </div>
-                    
-                  {/* Buttons - Responsive positioning and sizing */}
-                  <div className="absolute bottom-1 sm:bottom-2 md:bottom-4 lg:bottom-6 left-1/2 -translate-x-1/2 flex justify-center w-full z-20 px-4 sm:px-0">
-                    <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:w-[384px] p-1 sm:p-1.5 md:p-2 bg-white/10 rounded-[50px] outline outline-1 sm:outline-2 outline-white backdrop-blur-[10px] flex flex-row items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
-                      {/* Portfolio Button */} 
-                      <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-xs sm:text-sm md:text-base font-medium font-['Lufga'] whitespace-nowrap">
-                        Portfolio
-                        <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-1 sm:ml-1.5 md:ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </button>
-                      {/* Hire Me Button */} 
-                      <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 text-white text-xs sm:text-sm md:text-base font-light font-['Lufga'] whitespace-nowrap hover:bg-white/10 rounded-[60px] transition-colors duration-200">
-                        Hire me
-                      </button>
-                    </div>
-                  </div>
+              {/* Profile Image */}
+              <div className="relative z-10">
+                <Image
+                  src="/figma-images/profile-image.png"
+                  alt="Afred Profile"
+                  width={952}
+                  height={636}
+                  className="block mx-auto w-full h-auto max-w-[952px]"
+                  priority
+                  sizes="(max-width: 640px) 95vw, (max-width: 1024px) 85vw, 952px"
+                />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2 flex justify-center w-full z-20 px-4 sm:px-0">
+                <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:w-[384px] p-1 sm:p-1.5 md:p-2 bg-white/10 rounded-[50px] outline outline-1 sm:outline-2 outline-white backdrop-blur-[10px] flex flex-row items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
+                  {/* Portfolio Button */}
+                  <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-xs sm:text-sm md:text-base font-medium font-['Lufga'] whitespace-nowrap">
+                    Portfolio
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-1 sm:ml-1.5 md:ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  {/* Hire Me Button */}
+                  <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 text-white text-xs sm:text-sm md:text-base font-light font-['Lufga'] whitespace-nowrap hover:bg-white/10 rounded-[60px] transition-colors duration-200">
+                    Hire me
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
