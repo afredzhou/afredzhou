@@ -4,16 +4,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
-  
-  // Don't render navbar in studio routes
-  if (pathname?.startsWith('/studio')) {
-    return null
-  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)

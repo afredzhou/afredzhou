@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Template from './components/Template'
 
 export const metadata: Metadata = {
   title: 'Afred - Product Designer Portfolio',
@@ -35,9 +34,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://googlefonts.cn/css2?family=Lufga:wght@400;500;600&display=swap" />
       </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <Template>{children}</Template>
       </body>
     </html>
   )
