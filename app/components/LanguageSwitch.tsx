@@ -13,7 +13,8 @@ export default function LanguageSwitch() {
   const t = useTranslations();
 
   const switchLocale = (nextLocale: string) => {
-    // Explicitly navigate to the desired locale
+    console.log(`Switching from ${currentLocale} to ${nextLocale}`);
+    console.log(`Current pathname: ${pathname}`);
     router.push(pathname, { locale: nextLocale });
   };
 
