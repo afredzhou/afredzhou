@@ -11,3 +11,4 @@ Project Management:
 - 考虑指标中定义的成本优化
 - 保持与现有组件的一致性
 - 新生成大代码的UI与原来的保持一致
+- Cursor每一次的响应都要use context7
