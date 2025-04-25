@@ -208,7 +208,7 @@ export default function Home() {
                   />
                 </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Title with staggered animations */}
             <motion.div
@@ -300,16 +300,7 @@ export default function Home() {
               </div>
             </div>
             {/* Profile Image & Background - Animated on Scroll */}
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 20,
-                delay: 0.4
-              }}
+            <div
               className="relative w-full mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80"
             >
               {/* Background Circle */}
@@ -344,9 +335,10 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16">
@@ -552,6 +544,7 @@ export default function Home() {
             </div>
           </div>
           </div>
+        </section>
       </main>
   )
 }
