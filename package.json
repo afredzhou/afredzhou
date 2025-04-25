@@ -26,6 +26,7 @@
     "@vercel/og": "0.6.8",
     "classnames": "2.5.1",
     "date-fns": "4.1.0",
+    "framer-motion": "^12.9.1",
     "groq": "3.84.0",
     "i18next": "^25.0.1",
     "intl-segmenter-polyfill": "0.4.4",

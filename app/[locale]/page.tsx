@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { StarIcon, ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import { useTranslations } from 'next-intl'
+import { motion } from 'framer-motion'
 
 interface ServiceCardProps {
   title: string;
@@ -179,41 +180,91 @@ export default function Home() {
         <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto">
           {/* Content Container */}
           <div className="flex-1 relative w-full flex flex-col items-center">
-            {/* Hello Badge */}
-            <div className="inline-flex flex-col items-center">
+            {/* Hello Badge with fade-in animation */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 1.2,
+                  delay: 0.4,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
+                className="inline-flex flex-col items-center"
+                data-testid="animated-hero"
+              >
               <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
                 <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">{t('hero.greeting')}</span>
-                <div className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3">
-            <Image
+                <motion.div
+                  className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3"
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Image
                     src="/figma-images/sparkle-hello.svg"
                     alt=""
                     width={24}
                     height={24}
                     className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
                   />
-                </div>
+                </motion.div>
               </div>
             </div>
-            {/* Title */}
-            <div className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]">
+
+            {/* Title with staggered animations */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ staggerChildren: 0.2 }}
+              className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20"
+            >
+              <motion.h1
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95]"
+              >
                 <span className="text-neutral-900">{t('hero.iAm')}{' '}</span>
-                <span className="text-[#FD853A]">{t('site.name')}</span>
-              </h1>
-              <div className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900">
+                <motion.span
+                  className="text-[#FD853A]"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  {t('site.name')}
+                </motion.span>
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4"
+              >
+                <motion.h1
+                  initial={{ x: -50, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900"
+                >
                   {t('site.tagline')}
-                </h1>
-                {/* Left Sparkle */}
-                <Image
-                  src="/figma-images/sparkle-left.svg"
-                  alt=""
-                  width={64}
-                  height={80}
-                  className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 w-6 h-8 sm:w-8 sm:h-10 md:w-12 md:h-16 lg:w-16 lg:h-20 rotate-[-167.61deg]"
-                />
-              </div>
-            </div>
+                </motion.h1>
+
+                {/* Animated Left Sparkle */}
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ type: 'spring', stiffness: 100 }}
+                  className="absolute -left-2 sm:-left-4 md:-left-8 lg:-left-12 top-1/2 -translate-y-1/2 w-6 h-8 sm:w-8 sm:h-10 md:w-12 md:h-16 lg:w-16 lg:h-20"
+                >
+                  <Image
+                    src="/figma-images/sparkle-left.svg"
+                    alt=""
+                    width={64}
+                    height={80}
+                    className="rotate-[-167.61deg]"
+                  />
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
             {/* Testimonial & Experience Row */}
             <div className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative">
@@ -228,8 +279,8 @@ export default function Home() {
                   <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">
                     {t('site.testimonial')}
                   </p>
-            </div>
-          </div>
+                </div>
+              </div>
 
               <div className="absolute -top-16 sm:static right-4 sm:right-12 md:right-24 lg:right-[5%] xl:right-0 w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
                 {/* Experience */}
@@ -248,8 +299,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* Profile Image & Background */}
-            <div className="relative w-full  mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80">
+            {/* Profile Image & Background - Animated on Scroll */}
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: 0.4
+              }}
+              className="relative w-full mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80"
+            >
               {/* Background Circle */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0"></div>
 
@@ -282,8 +344,7 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
@@ -491,8 +552,6 @@ export default function Home() {
             </div>
           </div>
           </div>
-        </section>
-
       </main>
   )
 }
