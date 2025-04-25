@@ -9,8 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Urbanist', 'sans-serif'],
-        display: ['Vast Shadow', 'cursive'],
-        body: ['Lufga', 'sans-serif'],
+        display: ['Urbanist', 'sans-serif'],
+        body: ['Urbanist', 'sans-serif'],
       },
       colors: {
         primary: '#FF6B6B',

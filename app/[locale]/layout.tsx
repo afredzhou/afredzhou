@@ -63,14 +63,6 @@ export async function generateMetadata({
             rel="stylesheet"
             href="https://fonts.loli.net/css2?family=Urbanist:wght@400;500;600;700&display=swap"
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.loli.net/css2?family=Vast+Shadow&display=swap"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.loli.net/css2?family=Lufga:wght@400;500;600&display=swap"
-          />
         </head>
         <body>
           {/* Provider does not need explicit messages prop here */}
