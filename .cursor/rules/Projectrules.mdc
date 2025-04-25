@@ -3,12 +3,22 @@ description:
 globs: 
 alwaysApply: false
 ---
-Project Management:
-- 所有功能实现应参考 PROJECT.md
-- 所有API端点及其请求/响应格式参考 Documentation.md
-- 确保新代码符合定义的里程碑
-- 遵循已建立的数据库架构
-- 考虑指标中定义的成本优化
-- 保持与现有组件的一致性
-- 新生成大代码的UI与原来的保持一致
-- Cursor每一次的响应都要use context7
+✅ Functional Implementation
+- All features must adhere to the specifications outlined in PROJECT.md.
+
+- API endpoints and their request/response formats should follow the definitions in Documentation.md.
+
+- Ensure that new code aligns with the established project milestones.
+
+- Maintain consistency with the existing database schema.
+
+- When implementing new features, refer to the documentation corresponding to the versions of dependencies specified in package.json. If the exact version documentation is unavailable, consult the latest available documentation.
+
+- Consider cost optimization as defined in the project's key performance indicators (KPIs).
+
+- Ensure consistency with existing components throughout the project.
+
+- Newly developed UI components should match the design and functionality of existing components.
+
+- Each response from the cursor must utilize the latest documentation for reference.​
+
