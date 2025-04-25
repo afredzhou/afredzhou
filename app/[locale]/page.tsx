@@ -168,7 +168,7 @@ const BlogPostCard: React.FC<BlogPostCardProps> = ({ imageUrl, tag, author, date
 );
 
 export default function Home() {
-  const t = useTranslations('sections');
+  const t = useTranslations();
    // const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"; // Removed hardcoded lorem
 
   return (

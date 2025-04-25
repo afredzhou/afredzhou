@@ -1,18 +1,19 @@
-'use client'
+'use client';
 
-import { useLocale } from 'next-intl';
-import { usePathname, useRouter} from '../../i18n/navigation';
-import { locales } from '../../i18n';
+import { useLocale, useTranslations } from 'next-intl';
+import { usePathname, useRouter } from '../../i18n/navigation';
+import { routing } from '../../i18n/routing';
+
+const locales = routing.locales;
 
 export default function LanguageSwitch() {
-  const currentLocale = useLocale(); // 获取当前 locale
-  const pathname = usePathname(); // 获取当前路径 (不含 locale)
+  const currentLocale = useLocale();
+  const pathname = usePathname();
   const router = useRouter();
+  const t = useTranslations();
 
   const switchLocale = (nextLocale: string) => {
-    // Force full page reload to ensure translations update
-    const newPath = `/${nextLocale}${pathname}`;
-    window.location.assign(newPath);
+    router.push(pathname, { locale: nextLocale });
   };
 
   return (
@@ -28,10 +29,10 @@ export default function LanguageSwitch() {
             disabled={currentLocale === locale}
             aria-label={locale === 'en' ? 'Switch to English' : '切换到中文'}
           >
-            {locale === 'en' ? 'EN' : 'CN'}
+            {locale === 'en' ? 'en' : 'zh'}
           </button>
         ))}
       </div>
     </div>
-  )
+  );
 }

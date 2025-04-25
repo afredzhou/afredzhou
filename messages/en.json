@@ -1,5 +1,5 @@
 {
-  "title": "Blog with Sanity and Next.js",
+  "title": "Blog built with Sanity and Next.js",
   "description": "This is a blog built with Next.js and Sanity",
   "header": {
     "home": "Home",
@@ -9,7 +9,11 @@
   "footer": {
     "copyright": "© 2023 Next.js Blog",
     "terms": "Terms of Service",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "description": "Creating beautiful digital experiences with passion and purpose.",
+    "navigationHeading": "Navigation",
+    "newsletterHeading": "Get the latest information",
+    "emailPlaceholder": "Email Address"
   },
   "post": {
     "readMore": "Read More",
@@ -21,8 +25,8 @@
     "cancel": "Cancel"
   },
   "sections": {
-    "hero":{
-      "greeting":"hello"
+    "hero": {
+      "greeting": "Hello!"
     },
     "header": "Header Navigation",
     "footer": "Footer",
@@ -30,14 +34,14 @@
   },
   "tools": {
     "textSummarizer": {
-      "description": "AI-powered text summarization tool"
+      "description": "AI-based text summarization tool"
     }
   },
   "site": {
     "name": "Afred",
     "fullName": "Afred Zhou",
     "tagline": "Product Designer",
-    "portfolio": "Product Designer Portfolio",
+    "portfolio": "Portfolio",
     "testimonial": "Afred's Exceptional product design ensure our website's success. Highly Recommended",
     "copyright": "Copyright© 2025 Afred Zhou. All Rights Reserved."
   },
@@ -53,15 +57,82 @@
   "common": {
     "readMore": "Read More",
     "loading": "Loading...",
-    "error": "An error occurred"
+    "error": "An error occurred",
+    "profile": "Profile"
   },
-  "footer": {
-    "copyright": "© 2023 Next.js Blog",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "description": "Creating beautiful digital experiences with passion and purpose.",
-    "navigationHeading": "Navigation",
-    "newsletterHeading": "Get the latest information",
-    "emailPlaceholder": "Email Address"
+  "hero": {
+    "greeting": "Hello!",
+    "iAm": "I am",
+    "experienceYears": "10",
+    "experienceLabel": "Years Experience",
+    "portfolioButton": "Portfolio",
+    "hireMeButton": "Hire Me"
+  },
+  "services": {
+    "title": "My Services",
+    "description": "[Placeholder] Service description text.",
+    "uiUxDesign": "UI/UX Design",
+    "webDesign": "Web Design",
+    "landingPage": "Landing Page Design"
+  },
+  "experience": {
+    "title": "My Work Experience",
+    "roleExperienceDesigner": "Experience Designer",
+    "descriptionCognizant": "[Placeholder] Description of work at Cognizant.",
+    "roleUiUxDesigner": "UI/UX Designer",
+    "descriptionSugee": "[Placeholder] Description of work at Sugee Pvt limited.",
+    "roleLeadUxDesigner": "Lead UX Designer",
+    "descriptionCinetstox": "[Placeholder] Description of work at Cinetstox."
+  },
+  "hireMe": {
+    "title": "Why Choose Me?",
+    "description": "[Placeholder] Explanation of why you should hire me.",
+    "projectsCompleted": "Projects Completed",
+    "positiveReviews": "Positive Reviews",
+    "hireMeButton": "Hire Me"
+  },
+  "portfolio": {
+    "title": "Check Out My Portfolio",
+    "seeAllButton": "See All",
+    "tags": {
+      "landingPage": "Landing Page",
+      "productDesign": "Product Design",
+      "animation": "Animation",
+      "glassmorphism": "Glassmorphism",
+      "cards": "Cards"
+    },
+    "descriptionLirante": "[Placeholder] Project description for Lirante - Food Delivery Solution."
+  },
+  "testimonials": {
+    "title": "Client Testimonials That Speak Results",
+    "description": "[Placeholder] Introduction to testimonials section.",
+    "quoteExample": "[Placeholder] Example testimonial text."
+  },
+  "blog": {
+    "title": "Blog Posts From Me",
+    "tagUiUx": "UI/UX Design",
+    "authorJayesh": "Jayesh Patil",
+    "post1": {
+      "title": "Design Unveiled: Behind the UI/UX Magic"
+    },
+    "tagAppDesign": "App Design",
+    "post2": {
+      "title": "Sugee: Loan Management System for Rural Areas"
+    },
+    "post3": {
+      "title": "Cinetrade: Innovative Way to Invest in Digital Media"
+    }
+  },
+  "cta": {
+    "title": "Have a Great Project Idea? Let's Discuss",
+    "emailPlaceholder": "Enter Email Address",
+    "sendButton": "Send",
+    "averageRatings": "Average Rating 4.9/5",
+    "winningAwards": "25+ Awards Won",
+    "certifiedDesigner": "Certified Product Designer"
+  },
+  "localeSwitcher": {
+    "en": "EN",
+    "zh": "中文"
   }
 }
