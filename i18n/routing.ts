@@ -12,15 +12,10 @@ export const routing = defineRouting({
   // Use prefix-based routing only for non-default locales
   localePrefix: 'as-needed',
 
-  // Domain configuration (optional)
-  // domains: [
-  //   {
-  //     domain: 'example.com',
-  //     defaultLocale: 'en',
-  //   },
-  //   {
-  //     domain: 'example.cn',
-  //     defaultLocale: 'zh',
-  //   }
-  // ]
+  pathnames: {
+    '/': '/',
+    '/pathnames': {
+      zh: '/路径名称',
+    }
+  }
 });
