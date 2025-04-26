@@ -131,8 +131,8 @@
     "winningAwards": "25+ Awards Won",
     "certifiedDesigner": "Certified Product Designer"
   },
-  "localeSwitcher": {
-    "en": "EN",
-    "zh": "中文"
+  "LocaleSwitcher": {
+    "label": "Select language",
+    "locale": "Language: {locale}"
   }
 }

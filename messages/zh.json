@@ -123,8 +123,8 @@
     "winningAwards": "荣获 25+ 奖项",
     "certifiedDesigner": "认证产品设计师"
   },
-  "localeSwitcher": {
-    "en": "EN",
-    "zh": "中文"
+  "LocaleSwitcher": {
+    "label": "Select language",
+    "locale": "Language: {locale}"
   }
 }
