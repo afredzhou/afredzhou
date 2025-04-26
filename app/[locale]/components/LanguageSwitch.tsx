@@ -13,6 +13,7 @@ export default function LanguageSwitch() {
   const switchLocale = (nextLocale: string) => {
     console.log('switchLocale to', nextLocale);
     console.log('pathname:', pathname);
+    console.log('current window.location.pathname:', window.location.pathname);
     console.log('router:', router);
     router.replace(pathname, { locale: nextLocale });
   };
