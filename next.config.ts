@@ -1,8 +1,13 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin';
 
-// Specify the path to the request config file
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
+
+const withNextIntl = createNextIntlPlugin({
+  experimental: {
+    createMessagesDeclaration: './messages/en.json'
+  }
+});
 
 const config: NextConfig = {
   images: {
@@ -20,5 +25,6 @@ const config: NextConfig = {
     ignoreDuringBuilds: process.env.VERCEL_ENV === 'production',
   },
 }
+
 
 export default withNextIntl(config)
