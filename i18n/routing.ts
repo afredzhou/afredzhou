@@ -8,7 +8,6 @@ export const routing = defineRouting({
   // Default locale when no match
   defaultLocale: 'en',
   // Use prefix-based routing only for non-default locales
-  localePrefix: 'as-needed',
   pathnames: {
     '/': '/',
     '/pathnames': {
