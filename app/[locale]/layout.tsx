@@ -1,7 +1,7 @@
 import './globals.css'
-import Template from '../components/Template' // Ensure this path is correct
+import Template from './components/Template' // Ensure this path is correct
 import { Analytics } from '@vercel/analytics/react'
-import LanguageSwitch from '../components/LanguageSwitch'
+import LanguageSwitch from './components/LanguageSwitch'
 import { NextIntlClientProvider } from 'next-intl'
 import { routing } from '../../i18n/routing'
 import { notFound } from 'next/navigation'
