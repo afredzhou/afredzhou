@@ -1,18 +1,37 @@
-import {useLocale, useTranslations} from 'next-intl';
-import {routing} from '../../i18n/routing';
-import LocaleSwitcherSelect from './LocaleSwitcherSelect';
+'use client';
 
-export default function LocaleSwitcher() {
-  const t = useTranslations('LocaleSwitcher');
-  const locale = useLocale();
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '../../i18n/navigation';
+import { routing } from '../../i18n/routing';
+
+const locales = routing.locales;
+
+export default function LanguageSwitch() {
+  const currentLocale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const switchLocale = (nextLocale: string) => {
+    router.push(pathname, { locale: nextLocale });
+  };
 
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t('label')}>
-      {routing.locales.map((cur) => (
-        <option key={cur} value={cur}>
-          {t('locale', {locale: cur})}
-        </option>
-      ))}
-    </LocaleSwitcherSelect>
+    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50">
+      <div className="flex items-center gap-2">
+        {locales.map((locale) => (
+          <button
+            key={locale}
+            onClick={() => switchLocale(locale)}
+            className={`w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors duration-200 ${
+              currentLocale === locale ? 'bg-blue-600 font-bold' : 'bg-gray-600 hover:bg-gray-500'
+            }`}
+            disabled={currentLocale === locale}
+            aria-label={locale === 'en' ? 'Switch to English' : '切换到中文'}
+          >
+            {locale === 'en' ? 'EN' : 'ZH'}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
