@@ -11,7 +11,7 @@ export default function LanguageSwitch() {
   const pathname = usePathname();
   const router = useRouter();
   const switchLocale = (nextLocale: string) => {
-    console.log('switchLocale', nextLocale);
+    console.log('switchLocale to', nextLocale);
     router.replace(pathname, { locale: nextLocale });
   };
   return (
