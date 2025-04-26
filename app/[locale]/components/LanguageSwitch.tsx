@@ -16,6 +16,7 @@ export default function LanguageSwitch() {
     console.log('current window.location.pathname:', window.location.pathname);
     console.log('router:', router);
     router.replace(pathname, { locale: nextLocale });
+    router.refresh();
   };
   return (
     <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50">
