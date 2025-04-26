@@ -67,7 +67,6 @@ export async function generateMetadata({
         <body>
           {/* Provider does not need explicit messages prop here */}
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {' '}
             <Template>{children}</Template>
             <LanguageSwitch />
             <Analytics />

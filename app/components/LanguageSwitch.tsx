@@ -10,11 +10,10 @@ export default function LanguageSwitch() {
   const currentLocale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-
   const switchLocale = (nextLocale: string) => {
-    router.push(pathname, { locale: nextLocale });
+    console.log('switchLocale', nextLocale);
+    router.replace(pathname, { locale: nextLocale });
   };
-
   return (
     <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded-full shadow-lg z-50">
       <div className="flex items-center gap-2">
