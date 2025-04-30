@@ -2,8 +2,22 @@
 
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { useEffect, useState } from 'react'
+import PostPreview from '../../../components/PostPreview'
+import { getClient, getAllPosts } from '../../../lib/sanity.client'
+import type { Post } from '../../../lib/sanity.queries'
+
 export default function Footer() {
   const t = useTranslations();
+  const [posts, setPosts] = useState<Post[]>([])
+
+  useEffect(() => {
+    // 只在客户端请求Sanity数据
+    getAllPosts(getClient()).then((data) => {
+      setPosts(data.slice(0, 3)) // 只取最新3篇
+    })
+  }, [])
+
   return (
     <footer className="bg-[#2B2B2B] text-white py-16">
       <div className="container mx-auto px-4">

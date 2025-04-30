@@ -9,6 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from "framer-motion";
 import Hero from '../../components/Hero';
+import SanityBlogPosts from '../../components/SanityBlogPosts';
 
 interface ServiceCardProps {
   title: string;
@@ -545,6 +546,11 @@ export default function Home() {
               date="13 Aug, 2023"
               title={t('blog.post3.title')}
             />
+          </div>
+          {/* Sanity 博客集成区块 */}
+          <div className="mt-12 pt-8 border-t border-[#3B3B3B]">
+            <h4 className="text-orange-500 font-semibold mb-4">Sanity 博客</h4>
+            <SanityBlogPosts />
           </div>
         </div>
       </section>
