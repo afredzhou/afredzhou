@@ -7,6 +7,9 @@ import { useTranslations } from 'next-intl'
 import * as motion from "motion/react-client"
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react'
+import { AnimatePresence } from "framer-motion";
+import Hero from '../../components/Hero';
+
 interface ServiceCardProps {
   title: string;
   iconBgUrl: string;
@@ -174,6 +177,7 @@ export default function Home() {
   // const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales"; // Removed hardcoded lorem
   // 创建 useInView hook，监控元素是否进入视口
   const [inView, setInView] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -200,187 +204,172 @@ export default function Home() {
       <section className="relative w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
         <div className="relative w-full h-full flex flex-col items-center max-w-screen-xl mx-auto">
           {/* Content Container */}
-          <div className="flex-1 relative w-full flex flex-col items-center">
-            {/* Hello Badge with fade-in animation */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: inView ? 1 : 0 }}  // 当元素进入视口时，设置为完全不透明
-              transition={{
-                duration: 1.2,
-                delay: 0.4,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="inline-flex flex-col items-center"
-              data-testid="animated-hero"
-            >
-              <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
-                <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">{t('hero.greeting')}</span>
-                <div
-                  className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3" u
-                >
-                  <Image
-                    src="/figma-images/sparkle-hello.svg"
-                    alt=""
-                    width={24}
-                    height={24}
-                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
-                  />
-                </div>
-              </div>
-            </motion.div>
+          <Hero>
+            {(isHovered) => (
+              <>
+                {/* Hello Badge with fade-in animation - 只在 variant1 显示，只有 sparkle-hello 抖动 */}
+                {!isHovered && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 1.2,
+                      delay: 0.4,
+                      ease: [0.16, 1, 0.3, 1]
+                    }}
+                    className="inline-flex flex-col items-center"
+                    data-testid="animated-hero"
+                  >
+                    <div className="h-7 sm:h-8 px-3 sm:px-4 py-1 sm:py-1.5 bg-white rounded-[38px] outline outline-[1px] outline-neutral-900 inline-flex justify-center items-center relative">
+                      <span className="text-neutral-900 text-sm sm:text-base font-medium font-['Lufga']">{t('hero.greeting')}</span>
+                      <motion.div
+                        className="absolute -right-1 -top-1 sm:-right-2 sm:-top-2 md:-right-3 md:-top-3"
+                        initial={{ y: 0 }}
+                        animate={{ y: [0, -5, 0, 5, 0] }}
+                        transition={{
+                          duration: 1.2,
+                          repeat: Infinity,
+                          repeatType: "loop"
+                        }}
+                      >
+                        <Image
+                          src="/figma-images/sparkle-hello.svg"
+                          alt=""
+                          width={24}
+                          height={24}
+                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
+                        />
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                )}
 
-            {/* Title with staggered animations */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ staggerChildren: 0.2 }}
-              className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20"
-            >
-              <motion.h1
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[120px] font-semibold font-['Urbanist'] leading-[0.95]"
-              >
-                <span className="text-neutral-900">{t('hero.iAm')}{' '}</span>
-                <motion.span
-                  className="text-[#FD853A]"
-                  animate={{ scale: [1, 1.05, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  {t('site.name')}
-                </motion.span>
-              </motion.h1>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4"
-              >
-                <motion.h1
-                  initial={{ x: -50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900"
-                >
-                  {t('site.tagline')}
-                </motion.h1>
-
-                {/* Animated Left Sparkle */}
+                {/* Title with staggered animations - hover 时向上淡出 */}
                 <motion.div
-                  id="animated-element"
-                  className="absolute bottom-0 z-10"
-                  initial={{ opacity: 0, scale: 0.5, y: 20 }}
-                  animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.5, y: inView ? 0 : 20 }}
-                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  initial={{ opacity: 0, y: 0 }}
+                  animate={{ opacity: isHovered ? 0 : 1, y: isHovered ? -40 : 0 }}
+                  exit={{ opacity: 0, y: -40 }}
+                  transition={{ duration: 0.5 }}
+                  className="mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-center mb-16 sm:mb-16 md:mb-16 lg:mb-20"
+                  style={{ pointerEvents: isHovered ? 'none' : 'auto' }}
                 >
-                  <Image
-                    src="/figma-images/sparkle-left.svg"
-                    alt=""
-                    width={64}
-                    height={80}
-                    className="rotate-[-167.61deg]"
-                  />
+                  <motion.h1
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[120px] font-semibold font-['Urbanist'] leading-[0.95]"
+                  >
+                    <span className="text-neutral-900">{t('hero.iAm')}{' '}</span>
+                    <motion.span
+                      className="text-[#FD853A]"
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      {t('site.name')}
+                    </motion.span>
+                  </motion.h1>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="relative mt-1 sm:mt-0 md:-mt-2 lg:-mt-4"
+                  >
+                    <motion.h1
+                      initial={{ x: -50, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.8 }}
+                      className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-[100px] font-semibold font-['Urbanist'] leading-[0.95] text-neutral-900"
+                    >
+                      {t('site.tagline')}
+                    </motion.h1>
+                  </motion.div>
+                  {/* Animated Left Sparkle - 跟随 H1/title 一起淡出/淡入 */}
+                  <div
+                    className="absolute left-0 bottom-0 z-10"
+                  >
+                    <Image
+                      src="/figma-images/sparkle-left.svg"
+                      alt=""
+                      width={64}
+                      height={80}
+                      className="rotate-[-167.61deg]"
+                    />
+                  </div>
                 </motion.div>
-              </motion.div>
-            </motion.div>
 
-            {/* Testimonial & Experience Row */}
-            <div className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative">
-              <div className="absolute -top-16 sm:static left-4 sm:left-12 md:left-24 lg:left-[5%] xl:left-0 w-[120px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
-                {/* Testimonial */}
-                <div className="flex flex-col gap-1 sm:gap-2 text-[10px] sm:text-xs md:text-sm text-[#344054]">
-                  <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 relative self-start">
-                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2" />
-                    </svg>
-                  </div>
-                  <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">
-                    {t('site.testimonial')}
-                  </p>
-                </div>
-              </div>
-
-              <div className="absolute -top-16 sm:static right-4 sm:right-12 md:right-24 lg:right-[5%] xl:right-0 w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
-                {/* Experience */}
-                <div className="flex flex-col items-end gap-1 sm:gap-2">
-                  <div className="flex gap-0.5 sm:gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 mx-auto my-0.5 sm:my-1 bg-[#FD853A]"></div>
+                {/* Testimonial & Experience Row */}
+                <div className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative">
+                  <div className="absolute -top-16 sm:static left-4 sm:left-12 md:left-24 lg:left-[5%] xl:left-0 w-[120px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
+                    {/* Testimonial */}
+                    <div className="flex flex-col gap-1 sm:gap-2 text-[10px] sm:text-xs md:text-sm text-[#344054]">
+                      <div className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 relative self-start">
+                        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 19.2L3.5 7.2M3.5 7.2V19.2M3.5 7.2H14" stroke="#344054" strokeWidth="2" />
+                        </svg>
                       </div>
-                    ))}
+                      <p className="font-medium font-['Lufga'] leading-tight text-[8px] sm:text-[10px] md:text-xs lg:text-2xl">
+                        {t('site.testimonial')}
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">{t('hero.experienceYears')}</p>
-                    <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">{t('hero.experienceLabel')}</p>
+
+                  <div className="absolute -top-16 sm:static right-4 sm:right-12 md:right-24 lg:right-[5%] xl:right-0 w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
+                    {/* Experience */}
+                    <div className="flex flex-col items-end gap-1 sm:gap-2">
+                      <div className="flex gap-0.5 sm:gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5">
+                            <div className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 mx-auto my-0.5 sm:my-1 bg-[#FD853A]"></div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="text-right">
+                        <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-['Urbanist'] leading-none">{t('hero.experienceYears')}</p>
+                        <p className="text-[10px] sm:text-xs md:text-sm font-normal font-['Lufga']">{t('hero.experienceLabel')}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            {/* Profile Image & Background - Animated on Scroll */}
-            <div className="relative w-full mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80">
-              {/* Background Circle */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0">
-              </div>
+                {/* Profile Image & Background - Animated on Scroll */}
+                <div className="relative w-full mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80">
+                  {/* Background Circle */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] sm:w-[80%] max-w-[812px] h-[65%] sm:h-[70%] md:h-[65%] lg:h-[406px] bg-[#FEB273] rounded-t-full z-0">
+                  </div>
 
-              {/* Animation Image */}
-              <motion.div
-                id="animated-element"
-                className="absolute bottom-0 z-10"
-                initial={{ opacity: 0, scale: 0.5, y: 20 }} // 初始状态
-                animate={{
-                  opacity: inView ? 1 : 0,
-                  scale: inView ? 1 : 0.5,
-                  y: inView ? 0 : 20,
-                }} // 进入视口时触发动画
-                transition={{
-                  duration: 0.5,
-                  ease: 'easeOut',
-                }}
-              >
-                <Image
-                  src="/figma-images/Hero-animation.svg"
-                  alt="Hero Animation"
-                  layout="intrinsic"
-                  className="object-cover"
-                  width={1066}    // 设定图片的宽度
-                  height={719}   // 设定图片的高度
-                />
-              </motion.div>
+                  {/* Profile Image */}
+                  <div className="relative z-20">
+                    <Image
+                      src="/figma-images/profile-image.png"
+                      alt="Profile Image"
+                      width={952}
+                      height={636}
+                      className="block mx-auto w-full h-auto max-w-[952px]"
+                      priority
+                      sizes="(max-width: 640px) 95vw, (max-width: 1024px) 85vw, 952px"
+                    />
+                  </div>
 
-              {/* Profile Image */}
-              <div className="relative z-20">
-                <Image
-                  src="/figma-images/profile-image.png"
-                  alt="Profile Image"
-                  width={952}
-                  height={636}
-                  className="block mx-auto w-full h-auto max-w-[952px]"
-                  priority
-                  sizes="(max-width: 640px) 95vw, (max-width: 1024px) 85vw, 952px"
-                />
-              </div>
-
-              {/* Action Buttons */}
-              <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2 flex justify-center w-full z-20 px-4 sm:px-0">
-                <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:w-[384px] p-1 sm:p-1.5 md:p-2 bg-white/10 rounded-[50px] outline outline-1 sm:outline-2 outline-white backdrop-blur-[10px] flex flex-row items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
-                  {/* Portfolio Button */}
-                  <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-xs sm:text-sm md:text-base font-medium font-['Lufga'] whitespace-nowrap">
-                    Portfolio
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-1 sm:ml-1.5 md:ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </button>
-                  {/* Hire Me Button */}
-                  <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 text-white text-xs sm:text-sm md:text-base font-light font-['Lufga'] whitespace-nowrap hover:bg-white/10 rounded-[60px] transition-colors duration-200">
-                    Hire Me
-                  </button>
+                  {/* Action Buttons */}
+                  <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2 flex justify-center w-full z-20 px-4 sm:px-0">
+                    <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:w-[384px] p-1 sm:p-1.5 md:p-2 bg-white/10 rounded-[50px] outline outline-1 sm:outline-2 outline-white backdrop-blur-[10px] flex flex-row items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
+                      {/* Portfolio Button */}
+                      <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 bg-[#FD853A] rounded-[60px] flex items-center justify-center text-white text-xs sm:text-sm md:text-base font-medium font-['Lufga'] whitespace-nowrap">
+                        Portfolio
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 ml-1 sm:ml-1.5 md:ml-2" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M16 28L28 16M28 16H16M28 16V28" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </button>
+                      {/* Hire Me Button */}
+                      <button className="px-2 sm:px-3 md:px-4 lg:px-5 py-1 sm:py-1.5 md:py-2 lg:py-2.5 text-white text-xs sm:text-sm md:text-base font-light font-['Lufga'] whitespace-nowrap hover:bg-white/10 rounded-[60px] transition-colors duration-200">
+                        Hire Me
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </>
+            )}
+          </Hero>
         </div>
       </section>
       <section className="bg-[#171717] rounded-t-[50px] py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8">
