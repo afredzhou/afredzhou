@@ -297,9 +297,14 @@ export default function Home() {
                     />
                   </div>
                 </motion.div>
-
-                {/* Testimonial & Experience Row */}
-                <div className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative">
+                {/* Testimonial & Experience Row - 只做淡出淡入动画，位置不变 */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: isHovered ? 0 : 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full flex justify-between px-2 sm:px-12 md:px-24 lg:px-32 xl:px-2 mt-4 sm:mt-6 md:mt-8 lg:mt-12 relative"
+                >
                   <div className="absolute -top-16 sm:static left-4 sm:left-12 md:left-24 lg:left-[5%] xl:left-0 w-[120px] sm:w-[220px] md:w-[280px] lg:w-[320px]">
                     {/* Testimonial */}
                     <div className="flex flex-col gap-1 sm:gap-2 text-[10px] sm:text-xs md:text-sm text-[#344054]">
@@ -330,7 +335,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
+
                 {/* Profile Image & Background - Animated on Scroll */}
                 <div className="relative w-full mx-auto -mt-28 sm:-mt-36 md:-mt-44 lg:-mt-80">
                   {/* Background Circle */}
