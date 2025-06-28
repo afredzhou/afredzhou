@@ -5,6 +5,7 @@
 - Updated portfolio link to `https://aferdzhou.com` for accuracy.
 - Removed the 'Run Locally' instructions from `README.md` to keep the public document concise.
 - Optimized README title and description for better SEO with relevant keywords.
+- Added project images to the 'Highlight Projects' section in `README.md` to create a more engaging visual presentation.
 
 ### Reason
 Align documentation with current personal brand and make it easier for English readers to understand.

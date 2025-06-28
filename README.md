@@ -12,12 +12,11 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ## Highlight Projects
 
-| Type | What I Do |
-| ---- | --------- |
-| Website Design | Responsive, animated, user-friendly sites |
-| AI Apps | Products powered by artificial intelligence |
-| Full-Stack Apps | From UI to backend, end-to-end solutions |
-| XR / AR | Convert 3D models to XR format and embed them on the web |
+[![Project Lirante](https://raw.githubusercontent.com/afredzhou/afredzhou/master/public/figma-images/project-lirante-bg.png)](https://aferdzhou.com)
+*<p align="center">Web Design, Full-Stack Apps, and AI-Powered Applications</p>*
+
+[![XR/AR Project](https://raw.githubusercontent.com/afredzhou/afredzhou/master/public/figma-images/service-web-design-bg.png)](https://aferdzhou.com)
+*<p align="center">Immersive XR/AR experiences from 3D models to web deployment</p>*
 
 ## Project Categories (as featured on https://afredzhou.webflow.io)
 
