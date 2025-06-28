@@ -6,3 +6,6 @@
 
 ### Reason
 Align documentation with current personal brand and make it easier for English readers to understand.
+
+### Added
+- Listed detailed project categories in `README.md` based on portfolio site content.

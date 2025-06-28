@@ -19,6 +19,14 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 | Full-Stack Apps | From UI to backend, end-to-end solutions |
 | XR / AR | Convert 3D models to XR format and embed them on the web |
 
+## Project Categories (as featured on https://afredzhou.webflow.io)
+
+- **Web Design Projects** – A collection of responsive and beautifully designed websites.
+- **Artificial Intelligence Project** – Leveraging AI to build smarter digital products.
+- **Application Project** – End-to-end app development across web and mobile.
+- **Playground** – Experimental ideas, prototypes, and creative explorations.
+- **VR & AR Design** – Immersive experiences; from converting 3D models to deploying XR on the web.
+
 ## Tech Stack
 
 - **Next.js** – Front-end framework
