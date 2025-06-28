@@ -11,3 +11,4 @@ Align documentation with current personal brand and make it easier for English r
 ### Added
 - Listed detailed project categories in `README.md` based on portfolio site content.
 - Added `docs/SEO_Strategy.md` and linked it from README.
+- Added visual badges for the 'Tech Stack' section in `README.md` for better visual appeal.

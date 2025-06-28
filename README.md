@@ -29,11 +29,20 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ## Tech Stack
 
-- **Next.js** – Front-end framework
-- **Sanity CMS** – Real-time content editing
-- **Tailwind CSS** – Utility-first styling
-- **i18n** – English / Chinese auto-switch
-- **Vercel** – One-click deployment
+<p align="left">
+  <a href="https://nextjs.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+  </a>
+  <a href="https://www.sanity.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&logo=sanity&logoColor=white" alt="Sanity"/>
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+  </a>
+  <a href="https://vercel.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
+  </a>
+</p>
 
 ## Contact
 
