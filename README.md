@@ -69,6 +69,17 @@ Then open:
 - XR / AR interactive experiences
 - SEO & content strategy
 
+## SEO Strategy
+
+For a holistic "compound SEO" approach that aligns GitHub, Webflow, and the main domain, see the detailed playbook in [`docs/SEO_Strategy.md`](docs/SEO_Strategy.md). It covers:
+
+- Keyword & content matrix
+- Cross-platform linking tactics
+- Technical SEO setup (Next.js, Webflow)
+- Schema markup examples
+- Performance & Web Vitals checklist
+- Quarterly roadmap template
+
 ---
 
 © 2024 Afred Zhou. All rights reserved.
