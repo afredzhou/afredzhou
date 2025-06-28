@@ -1,6 +1,6 @@
-# Afred Zhou – Creative Designer Portfolio
+# Afred Zhou – Web Designer, Frontend Developer & XR/AR Specialist
 
-Welcome! This repo holds the source code for my personal site and portfolio.
+This repository contains the source code for my personal portfolio, showcasing my work in web design, front-end development, and immersive XR/AR experiences.
 
 Visit the live site → **https://aferdzhou.com**
 
