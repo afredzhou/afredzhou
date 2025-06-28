@@ -35,27 +35,6 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 - **i18n** – English / Chinese auto-switch
 - **Vercel** – One-click deployment
 
-## Run Locally
-
-```bash
-# 1. Clone
-git clone <repo-url>
-cd afredzhou
-
-# 2. Install packages
-npm install
-
-# 3. Configure environment variables
-cp .env.local.example .env.local  # add your Sanity keys here
-
-# 4. Start the dev server
-npm run dev
-```
-
-Then open:
-* Portfolio → http://localhost:3000
-* Sanity Studio → http://localhost:3000/studio
-
 ## Contact
 
 - Shenzhen, China
