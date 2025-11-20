@@ -1,9 +1,10 @@
-# Afred Zhou – Web Designer, Frontend Developer & XR/AR Specialist
+# Afred Zhou – Web Designer, Red light Specialist
 
 This repository contains the source code for my personal portfolio, showcasing my work in web design, front-end development, and immersive XR/AR experiences.
 
-Visit the live site → **https://aferdzhou.com**
+Visit my portfolio → https://aferdzhou.com
 
+Explore my new product site → https://gadegetkit.com
 ---
 
 ## About Me
@@ -12,11 +13,21 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ## Highlight Projects
 
-[![Project Lirante](https://raw.githubusercontent.com/afredzhou/afredzhou/master/public/figma-images/project-lirante-bg.png)](https://aferdzhou.com)
-*<p align="center">Web Design, Full-Stack Apps, and AI-Powered Applications</p>*
+### **Commercial & Enterprise Projects**
 
-[![XR/AR Project](https://raw.githubusercontent.com/afredzhou/afredzhou/master/public/figma-images/service-web-design-bg.png)](https://aferdzhou.com)
-*<p align="center">Immersive XR/AR experiences from 3D models to web deployment</p>*
+[![Kaiyan Medical](https://www.kaiyanmedical.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75)](https://www.kaiyanmedical.com/)
+*<p align="center">Medical-grade light therapy devices · UI/UX Design & Web Experience</p>*
+
+[![Lumaflex](https://www.lumaflex.com/cdn/shop/files/logo-black_180x.png?v=1707442340)](https://www.lumaflex.com/)
+*<p align="center">Performance recovery & wearable red-light therapy · Commerce UI & Product Design</p>*
+
+---
+
+### **New Product Platform**
+
+[![GadegetKit](https://gadegetkit.com/icon.png)](https://gadegetkit.com)
+*<p align="center">Smart mini-apps & AI utilities designed for creators and productivity</p>*
+
 
 ## Project Categories (as featured on https://afredzhou.webflow.io)
 
@@ -28,20 +39,32 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ## Tech Stack
 
+### **Frontend & Frameworks**
 <p align="left">
-  <a href="https://nextjs.org/" target="_blank">
-    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
-  </a>
-  <a href="https://www.sanity.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&logo=sanity&logoColor=white" alt="Sanity"/>
-  </a>
-  <a href="https://tailwindcss.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
-  </a>
-  <a href="https://vercel.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
-  </a>
+  <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 </p>
+
+### **Backend & Platforms**
+<p align="left">
+  <img src="https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&logo=sanity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" />
+</p>
+
+### **3D / XR / Visual**
+<p align="left">
+  <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/WebXR-005A9C?style=for-the-badge&logo=webxr&logoColor=white" />
+</p>
+
+### **Tools & Workflow**
+<p align="left">
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</p>
+
 
 ## Contact
 

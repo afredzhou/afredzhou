@@ -1,0 +1,22 @@
+---
+inclusion: manual
+---
+✅ Functional Implementation
+- All features must adhere to the specifications outlined in PROJECT.md.
+
+- API endpoints and their request/response formats should follow the definitions in Documentation.md.
+
+- Ensure that new code aligns with the established project milestones.
+
+- Maintain consistency with the existing database schema.
+
+- When implementing new features, refer to the documentation corresponding to the versions of dependencies specified in package.json. If the exact version documentation is unavailable, consult the latest available documentation.
+
+- Consider cost optimization as defined in the project's key performance indicators (KPIs).
+
+- Ensure consistency with existing components throughout the project.
+
+- Newly developed UI components should match the design and functionality of existing components.
+
+- Each response from the cursor must utilize the latest documentation for reference.​
+
