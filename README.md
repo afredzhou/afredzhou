@@ -40,30 +40,19 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 ## Tech Stack
 
 ### **Frontend & Frameworks**
-<p align="left">
+## Tech Stack
+
+<p align="center">
   <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-</p>
-
-### **Backend & Platforms**
-<p align="left">
   <img src="https://img.shields.io/badge/Sanity-F03E2F?style=for-the-badge&logo=sanity&logoColor=white" />
   <img src="https://img.shields.io/badge/Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" />
-</p>
-
-### **3D / XR / Visual**
-<p align="left">
   <img src="https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" />
   <img src="https://img.shields.io/badge/WebXR-005A9C?style=for-the-badge&logo=webxr&logoColor=white" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
 </p>
 
-### **Tools & Workflow**
-<p align="left">
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
-</p>
 
 
 ## Contact
@@ -92,4 +81,4 @@ For a holistic "compound SEO" approach that aligns GitHub, Webflow, and the main
 
 ---
 
-© 2024 Afred Zhou. All rights reserved.
+© 2025 Afred Zhou. All rights reserved.
