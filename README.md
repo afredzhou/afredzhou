@@ -15,17 +15,17 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ### **Commercial & Enterprise Projects**
 
-[![Kaiyan Medical](https://www.kaiyanmedical.com/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75)](https://www.kaiyanmedical.com/)
+[![Kaiyan Medical](https://www.kaiyanmedical.com/)](https://www.kaiyanmedical.com/)
 *<p align="center">Medical-grade light therapy devices · UI/UX Design & Web Experience</p>*
 
-[![Lumaflex](https://www.lumaflex.com/cdn/shop/files/logo-black_180x.png?v=1707442340)](https://www.lumaflex.com/)
+[![Lumaflex](https://www.lumaflex.com/)](https://www.lumaflex.com/)
 *<p align="center">Performance recovery & wearable red-light therapy · Commerce UI & Product Design</p>*
 
 ---
 
 ### **New Product Platform**
 
-[![GadegetKit](https://gadegetkit.com/icon.png)](https://gadegetkit.com)
+[![GadegetKit](https://www.gadegetkit.com/images/logo.png)](https://gadegetkit.com)
 *<p align="center">Smart mini-apps & AI utilities designed for creators and productivity</p>*
 
 
