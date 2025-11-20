@@ -39,9 +39,6 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ## Tech Stack
 
-### **Frontend & Frameworks**
-## Tech Stack
-
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
