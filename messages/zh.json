@@ -1,19 +1,25 @@
 {
   "title": "Sanity和Next.js构建的博客",
-  "description": "这是一个使用Next.js和Sanity构建的博客",
+  "description": "Afred Zhou 的作品集网站，聚焦产品设计、网页体验与 XR/AR 叙事。",
   "header": {
     "home": "首页",
     "about": "关于",
     "contact": "联系"
   },
   "footer": {
-    "copyright": "© 2023 Next.js博客",
+    "copyright": "© 2026 Afred Zhou。保留所有权利。",
     "terms": "服务条款",
     "privacy": "隐私政策",
-    "description": "用热情和目标创造美丽的数字体验",
+    "description": "专注于网页、产品与沉浸式体验的数字产品设计。",
     "navigationHeading": "导航",
-    "newsletterHeading": "获取最新信息",
-    "emailPlaceholder": "电子邮件地址"
+    "newsletterHeading": "开始聊一聊",
+    "emailPlaceholder": "你的邮箱地址",
+    "contactHeading": "联系我",
+    "contactLocation": "中国深圳",
+    "contactEmail": "afred.zhou.cn@gmail.com",
+    "contactPhone": "+1 (209) 597-3212",
+    "contactWebsite": "www.afredzhou.com",
+    "newsletterDescription": "发一段项目简介给我，我会尽快回复。"
   },
   "post": {
     "readMore": "阅读更多",
@@ -34,8 +40,8 @@
     "fullName": "周先生",
     "tagline": "产品设计师",
     "portfolio": "产品设计师作品集",
-    "testimonial": "小周出色的产品设计确保了我们网站的成功。强烈推荐",
-    "copyright": "版权所有© 2025 小周。保留所有权利。"
+    "testimonial": "我把复杂想法整理成清晰、友好、可落地的数字体验，并且重视协作与细节。",
+    "copyright": "© 2026 Afred Zhou。保留所有权利。"
   },
   "navigation": {
     "home": "首页",
@@ -62,7 +68,7 @@
   },
   "services": {
     "title": "我的服务",
-    "description": "[占位符] 服务描述文本。",
+    "description": "从概念梳理到上线交付，我会把可用性、叙事表达和商业目标一起考虑进产品体验里。",
     "uiUxDesign": "UI/UX 设计",
     "webDesign": "网页设计",
     "landingPage": "着陆页设计"
@@ -70,15 +76,15 @@
   "experience": {
     "title": "我的工作经历",
     "roleExperienceDesigner": "体验设计师",
-    "descriptionCognizant": "[占位符] Cognizant 工作经历描述。",
+    "descriptionCognizant": "参与企业级数字产品设计，把复杂需求整理成更清晰的用户路径、界面结构与可复用设计规范。",
     "roleUiUxDesigner": "UI/UX 设计师",
-    "descriptionSugee": "[占位符] Sugee Pvt limited 工作经历描述。",
+    "descriptionSugee": "负责响应式产品与营销体验设计，输出原型、用户流程与界面模式，帮助团队更快从想法推进到发布。",
     "roleLeadUxDesigner": "首席 UX 设计师",
-    "descriptionCinetstox": "[占位符] Cinetstox 工作经历描述。"
+    "descriptionCinetstox": "围绕高信任度的金融产品场景，串联研究、交互设计与产品叙事，打造更易理解的投资体验。"
   },
   "hireMe": {
     "title": "为什么选择我？",
-    "description": "[占位符] 解释为什么应该雇佣我。",
+    "description": "我能同时覆盖策略、界面设计和前端落地，帮助团队把模糊想法更顺畅地推进成可上线的产品体验。",
     "projectsCompleted": "完成的项目",
     "positiveReviews": "积极评价",
     "hireMeButton": "雇佣我"
@@ -93,17 +99,23 @@
       "glassmorphism": "玻璃拟态",
       "cards": "卡片"
     },
-    "descriptionLirante": "[占位符] Lirante - 送餐解决方案的项目描述。"
+    "descriptionLirante": "一个聚焦转化效率的产品落地页概念，通过清晰的信息层级和现代化视觉语言，更快传达产品价值。"
   },
   "testimonials": {
-    "title": "结果证明一切的客户评价",
-    "description": "[占位符] 客户评价部分介绍。",
-    "quoteExample": "[占位符] 示例客户评价文本。"
+    "title": "我是如何支持团队的",
+    "description": "好的结果通常来自清晰的方法、认真打磨的迭代，以及设计和产品之间紧密的协作。",
+    "card1Title": "先理解再设计",
+    "card1Body": "我会先弄清楚产品目标、用户对象和业务约束，再决定视觉与交互方向，让设计有明确依据。",
+    "card2Title": "系统化思考",
+    "card2Body": "我会沉淀可复用的模式、组件与交互规则，帮助团队在保持一致性的前提下更快扩展。",
+    "card3Title": "关注真实上线",
+    "card3Body": "我重视交付与实现细节，而不只是静态稿，让设计与代码之间的落差尽量更小。"
   },
   "blog": {
-    "title": "来自我的博客文章",
+    "title": "最新文章与笔记",
+    "description": "这里会展示 Sanity 中发布的最新内容；如果暂时还没有，也欢迎直接联系我索取案例与作品资料。",
     "tagUiUx": "UI/UX 设计",
-    "authorJayesh": "Jayesh Patil",
+    "authorJayesh": "Afred Zhou",
     "post1": {
       "title": "设计揭秘：UI/UX 魔术幕后"
     },
@@ -118,7 +130,7 @@
   "cta": {
     "title": "有很棒的项目想法？我们来讨论一下",
     "emailPlaceholder": "输入电子邮件地址",
-    "sendButton": "发送",
+    "sendButton": "发邮件给我",
     "averageRatings": "平均评分 4.9/5",
     "winningAwards": "荣获 25+ 奖项",
     "certifiedDesigner": "认证产品设计师"

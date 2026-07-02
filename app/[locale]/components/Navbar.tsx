@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import { useTranslations } from 'next-intl'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const t = useTranslations();
+  const t = useTranslations()
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -22,13 +22,19 @@ const Navbar = () => {
         <div className="relative bg-[#151515] rounded-full px-4 sm:px-6 py-3 flex items-center justify-between md:justify-start">
           {/* Left Links - Hidden on Mobile */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium">
+            <Link
+              href="/"
+              className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium"
+            >
               {t('header.home')}
             </Link>
-            <Link href="/about" className="text-white text-base font-medium">
+            <Link
+              href="#experience"
+              className="text-white text-base font-medium"
+            >
               {t('header.about')}
             </Link>
-            <Link href="/service" className="text-white text-base font-medium">
+            <Link href="#services" className="text-white text-base font-medium">
               {t('navigation.service')}
             </Link>
           </div>
@@ -46,7 +52,9 @@ const Navbar = () => {
               className="w-6 h-6"
               priority
             />
-            <span className="text-white text-base font-medium">{t('site.name')}</span>
+            <span className="text-white text-base font-medium">
+              {t('site.name')}
+            </span>
           </Link>
 
           {/* Spacer - Hidden on Mobile */}
@@ -54,48 +62,81 @@ const Navbar = () => {
 
           {/* Right Links - Hidden on Mobile */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/resume" className="text-white text-base font-medium">
+            <Link
+              href="#experience"
+              className="text-white text-base font-medium"
+            >
               {t('navigation.resume')}
             </Link>
-            <Link href="/project" className="text-white text-base font-medium">
+            <Link
+              href="#portfolio"
+              className="text-white text-base font-medium"
+            >
               {t('navigation.project')}
             </Link>
-            <Link href="/contact" className="text-white text-base font-medium">
+            <Link href="#contact" className="text-white text-base font-medium">
               {t('header.contact')}
             </Link>
           </div>
 
           {/* Hamburger Menu Button - Only on Mobile, appears on the right due to justify-between */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-white focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none"
+            >
               {isMenuOpen ? (
                 <XMarkIcon className="h-6 w-6" />
               ) : (
                 <Bars3Icon className="h-6 w-6" />
               )}
-          </button>
+            </button>
           </div>
         </div>
 
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="md:hidden mt-2 bg-[#151515] rounded-lg shadow-lg py-4 flex flex-col items-center gap-4">
-            <Link href="/" onClick={closeMenu} className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium w-4/5 text-center">
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="bg-[#FD853A] text-white px-6 py-2 rounded-full text-base font-medium w-4/5 text-center"
+            >
               {t('header.home')}
             </Link>
-            <Link href="/about" onClick={closeMenu} className="text-white text-base font-medium py-2">
+            <Link
+              href="#experience"
+              onClick={closeMenu}
+              className="text-white text-base font-medium py-2"
+            >
               {t('header.about')}
             </Link>
-            <Link href="/service" onClick={closeMenu} className="text-white text-base font-medium py-2">
+            <Link
+              href="#services"
+              onClick={closeMenu}
+              className="text-white text-base font-medium py-2"
+            >
               {t('navigation.service')}
             </Link>
-            <Link href="/resume" onClick={closeMenu} className="text-white text-base font-medium py-2">
+            <Link
+              href="#experience"
+              onClick={closeMenu}
+              className="text-white text-base font-medium py-2"
+            >
               {t('navigation.resume')}
             </Link>
-            <Link href="/project" onClick={closeMenu} className="text-white text-base font-medium py-2">
+            <Link
+              href="#portfolio"
+              onClick={closeMenu}
+              className="text-white text-base font-medium py-2"
+            >
               {t('navigation.project')}
             </Link>
-            <Link href="/contact" onClick={closeMenu} className="text-white text-base font-medium py-2">
+            <Link
+              href="#contact"
+              onClick={closeMenu}
+              className="text-white text-base font-medium py-2"
+            >
               {t('header.contact')}
             </Link>
           </div>

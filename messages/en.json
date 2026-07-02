@@ -1,19 +1,25 @@
 {
   "title": "Blog built with Sanity and Next.js",
-  "description": "This is a blog built with Next.js and Sanity",
+  "description": "Portfolio site for Afred Zhou, focused on product design, web experiences, and XR/AR storytelling.",
   "header": {
     "home": "Home",
     "about": "About",
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "© 2023 Next.js Blog",
+    "copyright": "© 2026 Afred Zhou. All rights reserved.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
-    "description": "Creating beautiful digital experiences with passion and purpose.",
+    "description": "Designing thoughtful digital products across web, product, and immersive experiences.",
     "navigationHeading": "Navigation",
-    "newsletterHeading": "Get the latest information",
-    "emailPlaceholder": "Email Address"
+    "newsletterHeading": "Start a conversation",
+    "emailPlaceholder": "Your email address",
+    "contactHeading": "Contact",
+    "contactLocation": "Shenzhen, China",
+    "contactEmail": "afred.zhou.cn@gmail.com",
+    "contactPhone": "+1 (209) 597-3212",
+    "contactWebsite": "www.afredzhou.com",
+    "newsletterDescription": "Share a brief about your project and I will get back to you."
   },
   "post": {
     "readMore": "Read More",
@@ -42,8 +48,8 @@
     "fullName": "Afred Zhou",
     "tagline": "Product Designer",
     "portfolio": "Portfolio",
-    "testimonial": "Afred's Exceptional product design ensure our website's success. Highly Recommended",
-    "copyright": "Copyright© 2025 Afred Zhou. All Rights Reserved."
+    "testimonial": "I turn complex ideas into clear, friendly digital experiences with careful detail and strong collaboration.",
+    "copyright": "© 2026 Afred Zhou. All rights reserved."
   },
   "navigation": {
     "home": "Home",
@@ -70,7 +76,7 @@
   },
   "services": {
     "title": "My Services",
-    "description": "[Placeholder] Service description text.",
+    "description": "From concept framing to polished launch assets, I design digital experiences that balance usability, storytelling, and business goals.",
     "uiUxDesign": "UI/UX Design",
     "webDesign": "Web Design",
     "landingPage": "Landing Page Design"
@@ -78,15 +84,15 @@
   "experience": {
     "title": "My Work Experience",
     "roleExperienceDesigner": "Experience Designer",
-    "descriptionCognizant": "[Placeholder] Description of work at Cognizant.",
+    "descriptionCognizant": "Worked on enterprise-facing digital products, translating complex requirements into clearer journeys, cleaner interfaces, and practical design systems.",
     "roleUiUxDesigner": "UI/UX Designer",
-    "descriptionSugee": "[Placeholder] Description of work at Sugee Pvt limited.",
+    "descriptionSugee": "Led responsive product and marketing experiences, creating prototypes, user flows, and interface patterns that helped teams move faster from idea to release.",
     "roleLeadUxDesigner": "Lead UX Designer",
-    "descriptionCinetstox": "[Placeholder] Description of work at Cinetstox."
+    "descriptionCinetstox": "Shaped a trust-driven fintech experience by connecting research, interaction design, and product storytelling across a sensitive investment journey."
   },
   "hireMe": {
     "title": "Why Choose Me?",
-    "description": "[Placeholder] Explanation of why you should hire me.",
+    "description": "I work across strategy, interface design, and front-end implementation, which helps teams move from rough ideas to launch-ready experiences with less friction.",
     "projectsCompleted": "Projects Completed",
     "positiveReviews": "Positive Reviews",
     "hireMeButton": "Hire Me"
@@ -101,17 +107,23 @@
       "glassmorphism": "Glassmorphism",
       "cards": "Cards"
     },
-    "descriptionLirante": "[Placeholder] Project description for Lirante - Food Delivery Solution."
+    "descriptionLirante": "A focused product landing page concept built to communicate value quickly, simplify choice, and create a polished first impression for a modern digital product."
   },
   "testimonials": {
-    "title": "Client Testimonials That Speak Results",
-    "description": "[Placeholder] Introduction to testimonials section.",
-    "quoteExample": "[Placeholder] Example testimonial text."
+    "title": "How I Support Teams",
+    "description": "The strongest work usually comes from clear process, thoughtful iteration, and close collaboration across design and product.",
+    "card1Title": "Discovery First",
+    "card1Body": "I start by understanding the product, the audience, and the business goal so the visual direction has a clear reason behind it.",
+    "card2Title": "System Thinking",
+    "card2Body": "I build reusable patterns, components, and interaction rules that help teams scale faster without losing consistency.",
+    "card3Title": "Launch Ready",
+    "card3Body": "I care about the final handoff and implementation details, not just mockups, so ideas ship with fewer gaps between design and code."
   },
   "blog": {
-    "title": "Blog Posts From Me",
+    "title": "Latest Writing & Notes",
+    "description": "Recent posts published from Sanity. If nothing is live yet, feel free to reach out for selected case studies and work samples.",
     "tagUiUx": "UI/UX Design",
-    "authorJayesh": "Jayesh Patil",
+    "authorJayesh": "Afred Zhou",
     "post1": {
       "title": "Design Unveiled: Behind the UI/UX Magic"
     },
@@ -126,7 +138,7 @@
   "cta": {
     "title": "Have a Great Project Idea? Let's Discuss",
     "emailPlaceholder": "Enter Email Address",
-    "sendButton": "Send",
+    "sendButton": "Email Me",
     "averageRatings": "Average Rating 4.9/5",
     "winningAwards": "25+ Awards Won",
     "certifiedDesigner": "Certified Product Designer"
