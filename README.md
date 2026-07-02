@@ -15,14 +15,6 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 ### **Commercial & Enterprise Projects**
 
-[![Kaiyan Medical](https://cdn.prod.website-files.com/65d03cf1c0c330a1435f3274/6811e172dce29f9cdcc20d71_1-p-500.png)](https://www.kaiyanmedical.com/)
-*<p align="center">Medical-grade light therapy devices · UI/UX Design & Web Experience</p>*
-
-[![Lumaflex](https://www.lumaflex.com/cdn/shop/files/Logo_White_with_R_trademark_3.webp?v=1748513909&width=190)](https://www.lumaflex.com/)
-*<p align="center">Performance recovery & wearable red-light therapy · Commerce UI & Product Design</p>*
-
----
-
 ### **New Product Platform**
 
 [![GadegetKit](https://www.gadegetkit.com/images/logo.png)](https://gadegetkit.com)
@@ -56,7 +48,6 @@ I'm a visual storyteller who turns complex ideas into clear and friendly digital
 
 - Shenzhen, China
 - ✉️ afred.zhou.cn@gmail.com
-- 📞 +1 (209) 597-3212
 - 🌐 https://aferdzhou.com
 
 ## Services
